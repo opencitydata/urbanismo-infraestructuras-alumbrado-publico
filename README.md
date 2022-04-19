@@ -14,5 +14,5 @@ Queremos dar las gracias a todos los que han colaborado durante este día, tanto
 
 
 # GITHUB PAGES
-- https://mmb99.github.io/AlumbradoEn/
-- https://mmb99.github.io/Alumbrado.github.io/
+- Inglés: https://mmb99.github.io/AlumbradoEn/
+- Español: https://mmb99.github.io/Alumbrado/
