@@ -1,0 +1,60 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+@prefix xsd: <http://www.w3.org/2001/XMLSSchema#> 
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> 
+@prefix dct: <https://purl.org/dc/terms/>
+@prefix skoslight: <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria> .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria> a skos:ConceptScheme;
+rdfs:label "Tipos de luminaria de alumbrado público";
+rdfs:comment "Tesauro que recoge los tipos de luminaria de alumbrado público"
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/proyector>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/empotradopared>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/baliza>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/viaria>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/artistica>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/artisticaconreflector>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/viariacierrepolicarbonato>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/viariacierrevidrioplano>
+prov:hadPrimarySource <https://www.opendatalapalma.es/datasets/e715be8fec6f4fd3b671f4592f8a209c_0/explore?location=28.665278%2C-17.862285%2C11.31&showTable=true>
+
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/proyector> a skos:Concept;
+skos:notation "Proyector"
+skos:prefLabel "Proyector"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria>
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/empotradopared> a skos:Concept;
+skos:notation "Empotrado pared"
+skos:prefLabel "Empotrado pared"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria>
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/baliza> a skos:Concept;
+skos:notation "Baliza"
+skos:prefLabel "Baliza"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria>
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/viaria> a skos:Concept;
+skos:notation "Viaria"
+skos:prefLabel "Viaria"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria>
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/artistica> a skos:Concept;
+skos:notation "Artística"
+skos:prefLabel "Artística"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria>
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/artisticaconreflector> a skos:Concept;
+skos:notation "Artística con reflector"
+skos:prefLabel "Artística con reflector"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestruxturas/alumbrado-publico/tipo-luminaria>
+
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/viariacierrepolicarbonato> a skos:Concept;
+skos:notation "Viaria cierre policarbonato"
+skos:prefLabel "Viaria cierre policarbonato"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria>
+
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/viariacierrevidrioplano> a skos:Concept;
+skos:notation "Viaria cierre vidrio plano"
+skos:prefLabel "Viaria cierre vidrio plano"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria>

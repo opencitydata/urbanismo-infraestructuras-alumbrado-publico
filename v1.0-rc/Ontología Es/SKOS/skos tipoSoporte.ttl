@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+@prefix xsd: <http://www.w3.org/2001/XMLSSchema#> 
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> 
+@prefix dct: <https://purl.org/dc/terms/>
+@prefix skoslight: <http://vocab.linkeddata,es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte> a skos:ConceptScheme;
+rdfs:label "Tipos de soporte del alumbrado público";
+rdfs:comment "Tesauro que recoge los tipos de soporte del alumbrado público"
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/columna>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/fachada>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/poste>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/postelete>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/posteenzanja>
+
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/columna> a skos:Concept;
+skos:notation "Columna"
+skos:prefLabel "Columna"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte>
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/fachada> a skos:Concept;
+skos:notation "Fachada"
+skos:prefLabel "Fachada"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte>
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/poste> a skos:Concept;
+skos:notation "Poste"
+skos:prefLabel "Poste"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte>
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/postelete> a skos:Concept;
+skos:notation "Postelete"
+skos:prefLabel "Postelete"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte>
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/posteenzanja> a skos:Concept;
+skos:notation "Poste en zanja"
+skos:prefLabel "Poste en zanja"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte>
