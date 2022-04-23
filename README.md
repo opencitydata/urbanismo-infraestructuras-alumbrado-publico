@@ -12,6 +12,9 @@ Este repositorio continuará siendo actualizado en las próximas semanas.
 
 Queremos dar las gracias a todos los que han colaborado durante este día, tanto físicamente como remotamente a través de Twitter y otros medios sociales. **Sus nombres aparecerán en las próximas semanas**. También queremos agradecer al proyecto STARS4ALL [http://www.stars4all.eu] y a la Red Temática de Open Data y Smart Cities [http://www.opencitydata.es/]
 
+# Lista de cambios
+- [23/04/2022] Comienzo de la actualización a la versión 0.1, con nuevos patrones
+
 
 # GITHUB PAGES
 - Inglés: https://mmb99.github.io/AlumbradoEn/
