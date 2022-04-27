@@ -23,51 +23,45 @@
         rml:referenceFormulation ql:CSV
     ];
         rr:subjectMap [
-            rr:template "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico/Farola/{id}";
+            rr:template "http://vocab.linkeddata.es/madrid/recurso/urbanismo-infraestructuras/alumbrado-publico/Farola/{codigo}";
             rr:termType rr:IRI;
             rr:class esalumb:Farola
         ];
 
     rr:predicateObjectMap [
         rr:predicateMap [
-            rr:constant esalumb:Ubicacion;
+            rr:constant esalumb:ubicacion;
             rr:termType rr:IRI
         ];
         rr:objectMap [
             rr:parentTriplesMap <#FarolaMap2>;
             rr:joinCondition [
-                rr:child "id"; rr:parent "id";
+                rr:child "codigo"; rr:parent "codigo";
             ]
         ]
     ];
 
+
     rr:predicateObjectMap [
         rr:predicateMap [
-            rr:constant esalumb:Equipamiento;
+            rr:constant geosparql:hasGeometry;
             rr:termType rr:IRI
         ];
         rr:objectMap [
             rr:parentTriplesMap <#FarolaMap3>;
             rr:joinCondition [
-                rr:child "id"; rr:parent "id";
+                rr:child "codigo"; rr:parent "codigo";
             ]
         ]
     ];
 
     rr:predicateObjectMap [
-        rr:predicateMap [
-            rr:constant esalumb:Point;
-            rr:termType rr:IRI
-        ];
+       rr:predicate esalumb:codigo;
         rr:objectMap [
-            rr:parentTriplesMap <#FarolaMap4>;
-            rr:joinCondition [
-                rr:child "id"; rr:parent "id";
-            ]
+            rml:reference "codigo"; 
+            rr:datatype xsd:string;
         ]
-    ].
-
-
+    ].    
 
 
 
@@ -79,7 +73,7 @@
         rml:referenceFormulation ql:CSV
     ];
         rr:subjectMap [
-            rr:template "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico/Ubicacion/{id}";
+            rr:template "http://vocab.linkeddata.es/madrid/recurso/urbanismo-infraestructuras/alumbrado-publico/ubicacion/{codigo}";
             rr:termType rr:IRI;
             rr:class esalumb:ubicacion
         ];
@@ -117,44 +111,19 @@
     ].
 
 
-
-
-
 <#FarolaMap3> a rr:TriplesMap;
     rml:logicalSource [
         rml:source "Alumbrado.csv" ;
         rml:referenceFormulation ql:CSV
     ];
         rr:subjectMap [
-            rr:template "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico/Equipamiento/{id}";
+            rr:template "http://vocab.linkeddata.es/madrid/recurso/urbanismo-infraestructuras/alumbrado-publico/hasGeometry/{codigo}";
             rr:termType rr:IRI;
-            rr:class esalumb:Equipamiento
+            rr:class geosparql:hasGeometry
         ];
 
     rr:predicateObjectMap [
-       rr:predicate esalumb:id;
-        rr:objectMap [
-            rml:reference "id"; 
-            rr:datatype xsd:string;
-        ]
-    ].
-
-
-
-
-<#FarolaMap4> a rr:TriplesMap;
-    rml:logicalSource [
-        rml:source "Alumbrado.csv" ;
-        rml:referenceFormulation ql:CSV
-    ];
-        rr:subjectMap [
-            rr:template "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico/Point/{id}";
-            rr:termType rr:IRI;
-            rr:class esalumb:Point
-        ];
-
-    rr:predicateObjectMap [
-       rr:predicate esalumb:Longitude;
+       rr:predicate geosparql:Longitude;
         rr:objectMap [
             rml:reference "Longitude"; 
             rr:datatype xsd:string;
@@ -162,7 +131,7 @@
     ];
 
     rr:predicateObjectMap [
-       rr:predicate esalumb:Latitude;
+       rr:predicate geosparql:Latitude;
         rr:objectMap [
             rml:reference "Latitude"; 
             rr:datatype xsd:string;
