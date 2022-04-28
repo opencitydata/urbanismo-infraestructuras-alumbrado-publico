@@ -11,6 +11,7 @@ Es el archivo que contiene los datos del csv estructurados, a partir del vocabul
   - tipoLampara: Representa el modelo específico de la bombilla.
   - tipoLuminaria: Tiene tres posibilidades a representar, la primera sería tipo LED, la segunda opción sería de tipo DESCARGA (es lo mismo que las antiguas de incandescencia, halogenuros, etc) y por último el tipo LED-DESCARGA cuando se combinan ambos tipos.
   - tipoVia: Representa el tipo de vía de un lugar.
+  - numeroCalle: Representa el número de la calle en la que está la unidad luminosa.
   - calle: Representa el nombre de la calle o vía.
   - codigo: Representa el código que comparten un número de unidades luminosas que están en la misma calle.
   - distrito: Representa los 21 distritos de Madrid.
