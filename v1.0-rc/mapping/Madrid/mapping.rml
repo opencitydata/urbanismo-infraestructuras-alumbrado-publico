@@ -102,17 +102,9 @@
     ];
 
     rr:predicateObjectMap [
-       rr:predicate esadm:distrito;
+       rr:predicate esalumb:calle;
         rr:objectMap [
-            rml:reference "distrito"; 
-            rr:datatype xsd:string;
-        ]
-    ];
-
-    rr:predicateObjectMap [
-       rr:predicate esadm:barrio;
-        rr:objectMap [
-            rml:reference "barrio"; 
+            rml:reference "calle"; 
             rr:datatype xsd:string;
         ]
     ];
@@ -126,12 +118,23 @@
     ];
 
     rr:predicateObjectMap [
-       rr:predicate esalumb:calle;
+       rr:predicate esadm:distrito;
         rr:objectMap [
-            rml:reference "calle"; 
+            rml:reference "distrito"; 
+            rr:datatype xsd:string;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esadm:barrio;
+        rr:objectMap [
+            rml:reference "barrio"; 
             rr:datatype xsd:string;
         ]
     ].
+
+
+
 
 
 <#FarolaMap3> a rr:TriplesMap;
