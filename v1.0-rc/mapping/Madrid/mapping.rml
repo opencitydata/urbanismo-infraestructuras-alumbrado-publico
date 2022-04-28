@@ -23,9 +23,9 @@
         rml:referenceFormulation ql:CSV
     ];
         rr:subjectMap [
-            rr:template "http://vocab.linkeddata.es/madrid/recurso/urbanismo-infraestructuras/alumbrado-publico/Farola/{codigo}";
+            rr:template "http://vocab.linkeddata.es/madrid/recurso/urbanismo-infraestructuras/alumbrado-publico/farola/{codigo}";
             rr:termType rr:IRI;
-            rr:class esalumb:Farola
+            rr:class esalumb:farola
         ];
 
     rr:predicateObjectMap [
@@ -54,6 +54,19 @@
             ]
         ]
     ];
+
+    rr:predicateObjectMap [
+        rr:predicateMap [
+            rr:constant esalumb:luminaria;
+            rr:termType rr:IRI
+        ];
+        rr:objectMap [
+            rr:parentTriplesMap <#FarolaMap4>;
+            rr:joinCondition [
+                rr:child "codigo"; rr:parent "codigo";
+            ]
+        ]
+    ];    
 
     rr:predicateObjectMap [
        rr:predicate esalumb:codigo;
@@ -140,5 +153,53 @@
 
 
 
+<#FarolaMap4> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "Alumbrado.csv" ;
+        rml:referenceFormulation ql:CSV
+    ];
+        rr:subjectMap [
+            rr:template "http://vocab.linkeddata.es/madrid/recurso/urbanismo-infraestructuras/alumbrado-publico/luminaria/{codigo}";
+            rr:termType rr:IRI;
+            rr:class esalumb:luminaria;
+        ];
 
+    rr:predicateObjectMap [
+       rr:predicate esalumb:tipoLuminaria;
+        rr:objectMap [
+            rml:reference "tipoLuminaria"; 
+            rr:datatype xsd:string;
+        ]
+    ];
 
+    rr:predicateObjectMap [
+        rr:predicateMap [
+            rr:constant esalumb:lampara;
+            rr:termType rr:IRI
+        ];
+        rr:objectMap [
+            rr:parentTriplesMap <#FarolaMap5>;
+            rr:joinCondition [
+                rr:child "codigo"; rr:parent "codigo";
+            ]  
+        ]   
+    ].
+
+<#FarolaMap5> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "Alumbrado.csv" ;
+        rml:referenceFormulation ql:CSV
+    ];
+        rr:subjectMap [
+            rr:template "http://vocab.linkeddata.es/madrid/recurso/urbanismo-infraestructuras/alumbrado-publico/lampara/{codigo}";
+            rr:termType rr:IRI;
+            rr:class esalumb:lampara;
+        ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:tipoLampara;
+        rr:objectMap [
+            rml:reference "tipoLampara"; 
+            rr:datatype xsd:string;
+        ]
+    ].
