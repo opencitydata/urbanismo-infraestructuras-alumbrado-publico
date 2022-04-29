@@ -1,0 +1,1565 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "es", "undefined" ],
+    "baseIris" : [ "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico", "http://www.w3.org/2001/XMLSchema", "http://www.opengis.net/spec/geosparql", "http://www.w3.org/2004/02/skos/core" ],
+    "title" : {
+      "en" : "Vocabulary for the representation of the Public lighting",
+      "es" : "Vocabulario para la representación del Alumbrado Público"
+    },
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "author" : [ "Oscar Corcho García (Ontology Engineering Group - Universidad Politécnica de Madrid)", "Marian Martín Blázquez - Universidad Politécnica de Madrid" ],
+    "comments" : {
+      "en" : "Esta versión ha sido generada durante el desarrollo del trabajo fin de grado"
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "es",
+        "value" : "Oscar Corcho García (Ontology Engineering Group - Universidad Politécnica de Madrid)",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "es",
+        "value" : "Marian Martín Blázquez - Universidad Politécnica de Madrid",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Vocabulary for the representation of the Public lighting",
+        "type" : "label"
+      }, {
+        "identifier" : "title",
+        "language" : "es",
+        "value" : "Vocabulario para la representación del Alumbrado Público",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "4",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "73",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "15",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "34",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "80",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "86",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Poste",
+      "en" : "Pole",
+      "es" : "Poste"
+    },
+    "comment" : {
+      "en" : "Column that is placed verticaly so it helps as a support",
+      "es" : "Columna que se coloca de forma vertical que srive de apoyo"
+    },
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.opengis.net/spec/geosparql/SpatialObject",
+    "baseIri" : "http://www.opengis.net/spec/geosparql",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SpatialObject"
+    },
+    "comment" : {
+      "en" : "Spatial Object represents everything that can\nhave a spatial representation",
+      "es" : "Spatial Object representa todo lo que tenga una representación espacial"
+    },
+    "attributes" : [ "external" ],
+    "id" : "6",
+    "superClasses" : [ "7", "8" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "10",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "4",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "16",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "21",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "23",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "25",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "26",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "19",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "36",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "31",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "38",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "39",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "40",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Farola",
+      "en" : "Lampost",
+      "es" : "Farola"
+    },
+    "subClasses" : [ "0", "14", "28", "8", "3" ],
+    "comment" : {
+      "en" : "Big lantern that is situated above a pole that brings light to the street or highways",
+      "es" : "Farol grande colocado en alto sobre un poste que sirve para alumbrar las calles y tramos de carreteras"
+    },
+    "id" : "1"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructura/equipamiento-municipal",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Equipamiento",
+      "en" : "Equipment",
+      "es" : "Equipamiento"
+    },
+    "attributes" : [ "external" ],
+    "id" : "28",
+    "superClasses" : [ "1" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "0", "14", "18", "3" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "74",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "73",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "0", "14", "18", "3" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "76"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "77",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "15",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "34",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "80",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.opengis.net/spec/geosparql/Geometry",
+    "baseIri" : "http://www.opengis.net/spec/geosparql",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Geometry"
+    },
+    "subClasses" : [ "6" ],
+    "comment" : {
+      "en" : "Geometry represents the top level geometry type.",
+      "es" : "Geometry representa el nivel más alto del tipo geometry"
+    },
+    "attributes" : [ "external" ],
+    "id" : "7",
+    "superClasses" : [ "49" ]
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "es",
+        "value" : "http://www.w3.org/2004/02/skos/core#",
+        "type" : "label"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "http://www.w3.org/2004/02/skos/core#",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ConceptScheme",
+      "undefined" : "Concept"
+    },
+    "individuals" : [ {
+      "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoAlimentacion",
+      "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+      "comment" : {
+        "en" : "Link to the skos list that determines what type of sorce has a streetlight",
+        "es" : "Enlace a la lista skos que determina que tipo de alimentación tienen las farolas"
+      },
+      "labels" : {
+        "IRI-based" : "tipoAlimentacion"
+      }
+    }, {
+      "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoCable",
+      "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+      "comment" : {
+        "en" : "Link to the skos list that determines what type of cable has a streetlight",
+        "es" : "Enlace a la lista skos que determina que tipo de cable tienen las farolas"
+      },
+      "labels" : {
+        "IRI-based" : "tipoCable"
+      }
+    }, {
+      "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoLampara",
+      "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+      "comment" : {
+        "en" : "Link to the skos list that determines what type of bulb has a streetlight",
+        "es" : "Enlace a la lista skos que determina el tipo de bombilla que se utiliza en la farola"
+      },
+      "labels" : {
+        "IRI-based" : "tipoLampara"
+      }
+    }, {
+      "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoCaja",
+      "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+      "comment" : {
+        "en" : "Link to the skos list that determines what type of box has a streetlight",
+        "es" : "Enlace a la lista skos que determina que tipo de caja tienen las farolas"
+      },
+      "labels" : {
+        "IRI-based" : "tipoCaja"
+      }
+    }, {
+      "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoDisposicion",
+      "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+      "comment" : {
+        "en" : "Link to the skos list that determines what type of disposition has a streetlight",
+        "es" : "Enlace a la lista skos que determina que tipo de disposición tienen las farolas"
+      },
+      "labels" : {
+        "IRI-based" : "tipoDisposicion"
+      }
+    }, {
+      "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoAlumbrado",
+      "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+      "comment" : {
+        "en" : "Link to the skos list that determines what type of lighting has a streetlight",
+        "es" : "Enlace a la lista skos que determina que tipo de alumbrado tienen las farolas"
+      },
+      "labels" : {
+        "IRI-based" : "tipoAlumbrado"
+      }
+    }, {
+      "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoLuminaria",
+      "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+      "comment" : {
+        "en" : "Link to the skos list that determines what type of luminary has the streetlight",
+        "es" : "Enlace a la lista skos que determina que tipo de Luminaria tienen las farolas"
+      },
+      "labels" : {
+        "IRI-based" : "tipoLuminaria"
+      }
+    }, {
+      "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoSoporte",
+      "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+      "comment" : {
+        "en" : "Link to the skos list that determines what type of pole has a streetlight",
+        "es" : "Enlace a la lista skos que determina que tipo de soporte tienen las farolas"
+      },
+      "labels" : {
+        "IRI-based" : "tipoSoporte"
+      }
+    }, {
+      "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoIluminacion",
+      "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+      "comment" : {
+        "en" : "Link to the skos list that determines what type of ilumination has a streetlight",
+        "es" : "Enlace a la lista skos que determina el tipo de iluminación que se utiliza en la farola"
+      },
+      "labels" : {
+        "IRI-based" : "tipoIluminacion"
+      }
+    } ],
+    "comment" : {
+      "en" : "A concept scheme may be defined to include concepts from different sources",
+      "es" : "Un concept scheme puede estar definido para incluir conceptos de distintas fuentes"
+    },
+    "attributes" : [ "external" ],
+    "id" : "87"
+  }, {
+    "iri" : "http://www.opengis.net/spec/geosparql/Point",
+    "baseIri" : "http://www.opengis.net/spec/geosparql",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Point"
+    },
+    "subClasses" : [ "7", "42" ],
+    "attributes" : [ "external" ],
+    "id" : "49"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "71",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "69",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.opengis.net/spec/geosparql/Feature",
+    "baseIri" : "http://www.opengis.net/spec/geosparql",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Feature"
+    },
+    "subClasses" : [ "6" ],
+    "comment" : {
+      "en" : "Location pattern  of the streetlights",
+      "es" : "Patrón de localización de las farolas"
+    },
+    "attributes" : [ "external" ],
+    "id" : "8",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "96",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "97",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "86",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "79",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "12",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "64",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Lampara",
+      "en" : "Lamp",
+      "es" : "Lampara"
+    },
+    "comment" : {
+      "en" : "It is the bulb from the streetlight",
+      "es" : "Es la bombilla de la farola"
+    },
+    "id" : "18",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Luminaria",
+      "en" : "Luminary",
+      "es" : "Luminaria"
+    },
+    "subClasses" : [ "18" ],
+    "comment" : {
+      "en" : "Lighting fixture that distributes, filters or transforms the light emitted by the lamps",
+      "es" : "Aparato de alumbrado que reparte, filtra o transforma la luz emitida por las lámparas"
+    },
+    "id" : "14",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Ubicacion",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Ubicacion",
+      "en" : "Location",
+      "es" : "Ubicacion"
+    },
+    "id" : "42",
+    "superClasses" : [ "49" ]
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Caja",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Caja",
+      "en" : "Box",
+      "es" : "Caja"
+    },
+    "comment" : {
+      "en" : "Place where the cables of the streetlight are accesible",
+      "es" : "Lugar desde el que se pueden acceder a los cables de la farola"
+    },
+    "id" : "3",
+    "superClasses" : [ "1" ]
+  } ],
+  "property" : [ {
+    "id" : "2",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "41",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "51",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "63",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "66",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "72",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "75",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "85",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "88",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "89",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "90",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "91",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "94",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "95",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "99",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "101",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "102",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "103",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "104",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "105",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "106",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "107",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoCable",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "tipoCable"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "Link to the skos list that determines what type of cable has a streetlight",
+      "es" : "Enlace a la lista skos que determina que tipo de cable tienen las farolas"
+    },
+    "attributes" : [ "object" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoAlumbrado",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "tipoAlumbrado"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Link to the skos list that determines what type of lighting has a streetlight",
+      "es" : "Enlace a la lista skos que determina que tipo de alumbrado tienen las farolas"
+    },
+    "attributes" : [ "object" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#accesorios",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "accesorios",
+      "en" : "accesories",
+      "es" : "accesorios"
+    },
+    "domain" : "0",
+    "attributes" : [ "datatype" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoLuminaria",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "tipoLuminaria"
+    },
+    "domain" : "14",
+    "comment" : {
+      "en" : "Link to the skos list that determines what type of luminary has the streetlight",
+      "es" : "Enlace a la lista skos que determina que tipo de Luminaria tienen las farolas"
+    },
+    "attributes" : [ "object" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#intensidadLuminica",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "intensidadLuminica",
+      "en" : "lightOutput",
+      "es" : "intensidadLuminica"
+    },
+    "domain" : "18",
+    "attributes" : [ "datatype" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#fechaAlta",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "fechaAlta",
+      "en" : "fehaAlta"
+    },
+    "domain" : "28",
+    "comment" : {
+      "en" : "Date whrn the streetlight was installed",
+      "es" : "Fecha en la que la farola fue instalada"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "27"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#id",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "id",
+      "en" : "id",
+      "es" : "id"
+    },
+    "domain" : "28",
+    "attributes" : [ "datatype" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoLampara",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "tipoLampara"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "Link to the skos list that determines what type of bulb has a streetlight",
+      "es" : "Enlace a la lista skos que determina el tipo de bombilla que se utiliza en la farola"
+    },
+    "attributes" : [ "object" ],
+    "id" : "33"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#ubicacion",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "ubicacion",
+      "en" : "location",
+      "es" : "ubicacion"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#consumo",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "consumo",
+      "en" : "consume",
+      "es" : "consumo"
+    },
+    "domain" : "18",
+    "attributes" : [ "datatype" ],
+    "id" : "43"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#fechaBaja",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "fechaBaja",
+      "en" : "endingDate",
+      "es" : "fechaBaja"
+    },
+    "domain" : "28",
+    "comment" : {
+      "en" : "Date when the streetlight was desinstalled",
+      "es" : "Fecha en la que la farola fue quitada"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#barrio",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "barrio",
+      "en" : "neighborhood",
+      "es" : "barrio"
+    },
+    "domain" : "42",
+    "attributes" : [ "datatype" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://www.opengis.net/spec/geosparql#Longitude",
+    "baseIri" : "http://www.opengis.net/spec/geosparql",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "Longitude",
+      "en" : "Longitude"
+    },
+    "domain" : "49",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#material",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "material",
+      "en" : "material",
+      "es" : "material"
+    },
+    "domain" : "52",
+    "attributes" : [ "datatype" ],
+    "id" : "51"
+  }, {
+    "range" : "49",
+    "domain" : "42",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "53"
+  }, {
+    "range" : "49",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "54"
+  }, {
+    "range" : "14",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "55"
+  }, {
+    "range" : "8",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "56"
+  }, {
+    "range" : "1",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "57"
+  }, {
+    "range" : "1",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "58"
+  }, {
+    "range" : "7",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "59"
+  }, {
+    "range" : "1",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "60"
+  }, {
+    "range" : "1",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "61"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#altura",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "altura",
+      "en" : "heigh",
+      "es" : "altura"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numBrazos",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "numBrazos",
+      "en" : "NumberArms",
+      "es" : "numeroBrazos"
+    },
+    "domain" : "0",
+    "attributes" : [ "datatype" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#zona",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "zona",
+      "en" : "zone",
+      "es" : "zona"
+    },
+    "domain" : "42",
+    "attributes" : [ "datatype" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#interdistancia",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "interdistancia",
+      "en" : "interdistance",
+      "es" : "interdistancia"
+    },
+    "domain" : "42",
+    "comment" : {
+      "en" : "Distance between streetlights",
+      "es" : "Distancia que hay entre farolas"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "67"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#alturaBrazo2",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "69",
+    "label" : {
+      "IRI-based" : "alturaBrazo2",
+      "en" : "armHeigh2",
+      "es" : "alturaBrazo2"
+    },
+    "domain" : "0",
+    "attributes" : [ "datatype" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#alturaBrazo1",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "71",
+    "label" : {
+      "IRI-based" : "alturaBrazo1",
+      "en" : "armHeigh2",
+      "es" : "alturaBrazo1"
+    },
+    "domain" : "0",
+    "attributes" : [ "datatype" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "74",
+    "label" : {
+      "IRI-based" : "topDataProperty"
+    },
+    "domain" : "73",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "72"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneLampara",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "tieneLampara",
+      "es" : "tieneLampara"
+    },
+    "domain" : "14",
+    "comment" : {
+      "en" : "Every luminary has a bulb",
+      "es" : "Cada luminaria tiene una lámpara"
+    },
+    "attributes" : [ "object" ],
+    "id" : "75"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#distrito",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "distrito",
+      "en" : "district",
+      "es" : "distrito"
+    },
+    "domain" : "42",
+    "attributes" : [ "datatype" ],
+    "id" : "78"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#gabineteDeControl",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "gabineteDeControl",
+      "en" : "controlCabinet",
+      "es" : "gabineteDeControl"
+    },
+    "domain" : "1",
+    "comment" : {
+      "es" : "Control cabinet that is shared between a group of streetlights"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "81"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#luminaria",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "luminaria",
+      "en" : "luminary",
+      "es" : "luminaria"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Every streetlight can have from one luminary to various of them",
+      "es" : "Cada farola puede tener de una a varias luminarias"
+    },
+    "attributes" : [ "object" ],
+    "id" : "82"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#horasDeFuncionamiento",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "horasDeFuncionamiento",
+      "en" : "workingHours",
+      "es" : "horasDeFuncionamiento"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "83"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoCaja",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "tipoCaja"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "Link to the skos list that determines what type of box has a streetlight",
+      "es" : "Enlace a la lista skos que determina que tipo de caja tienen las farolas"
+    },
+    "attributes" : [ "object" ],
+    "id" : "84"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#disposicion",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "86",
+    "label" : {
+      "IRI-based" : "disposicion"
+    },
+    "domain" : "42",
+    "attributes" : [ "datatype" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoDisposicion",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "80",
+    "label" : {
+      "IRI-based" : "tipoDisposicion"
+    },
+    "domain" : "42",
+    "comment" : {
+      "en" : "Link to the skos list that determines what type of disposition has a streetlight",
+      "es" : "Enlace a la lista skos que determina que tipo de disposición tienen las farolas"
+    },
+    "attributes" : [ "object" ],
+    "id" : "88"
+  }, {
+    "iri" : "http://www.opengis.net/spec/geosparql/hasGeometry",
+    "baseIri" : "http://www.opengis.net/spec/geosparql",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasGeometry"
+    },
+    "domain" : "8",
+    "attributes" : [ "external", "object" ],
+    "id" : "89"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#poste",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "poste",
+      "en" : "pole",
+      "es" : "poste"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Every streetlight can have a pole",
+      "es" : "Cada farola puede tener un poste"
+    },
+    "attributes" : [ "object" ],
+    "id" : "90"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoAlimentacion",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "tipoAlimentacion"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Link to the skos list that determines what type of sorce has a streetlight",
+      "es" : "Enlace a la lista skos que determina que tipo de alimentación tienen las farolas"
+    },
+    "attributes" : [ "object" ],
+    "id" : "91"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoVia",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "tipoVia",
+      "en" : "venueType",
+      "es" : "tipoVia"
+    },
+    "domain" : "42",
+    "attributes" : [ "datatype" ],
+    "id" : "92"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoSoporte",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "tipoSoporte"
+    },
+    "domain" : "0",
+    "comment" : {
+      "en" : "Link to the skos list that determines what type of pole has a streetlight",
+      "es" : "Enlace a la lista skos que determina que tipo de soporte tienen las farolas"
+    },
+    "attributes" : [ "object" ],
+    "id" : "93"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroLamparas",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "numeroLamparas",
+      "en" : "numberOfLamps",
+      "es" : "numeroLamparas"
+    },
+    "domain" : "18",
+    "attributes" : [ "datatype" ],
+    "id" : "94"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#fabricante",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "fabricante",
+      "en" : "manufacturer",
+      "es" : "fabricante"
+    },
+    "domain" : "76",
+    "attributes" : [ "datatype" ],
+    "id" : "95"
+  }, {
+    "iri" : "http://www.opengis.net/spec/geosparql/Latitude",
+    "baseIri" : "http://www.opengis.net/spec/geosparql",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "Latitude",
+      "en" : "Latitude"
+    },
+    "domain" : "49",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "98"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#anchura",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "96",
+    "label" : {
+      "IRI-based" : "anchura",
+      "en" : "width",
+      "es" : "anchura"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "99"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroLuminarias",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "numeroLuminarias",
+      "en" : "numberOfLuminaires",
+      "es" : "numeroLuminarias"
+    },
+    "domain" : "14",
+    "attributes" : [ "datatype" ],
+    "id" : "100"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#propietario",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "propietario",
+      "en" : "owner",
+      "es" : "propietario"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "101"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoIluminacion",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "tipoIluminacion"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Link to the skos list that determines what type of ilumination has a streetlight",
+      "es" : "Enlace a la lista skos que determina el tipo de iluminación que se utiliza en la farola"
+    },
+    "attributes" : [ "object" ],
+    "id" : "102"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#fechaRevision",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "fechaRevision",
+      "en" : "reviewDate",
+      "es" : "fechaRevision"
+    },
+    "domain" : "28",
+    "attributes" : [ "datatype" ],
+    "id" : "103"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#calle",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "97",
+    "label" : {
+      "IRI-based" : "calle",
+      "en" : "Street",
+      "es" : "calle"
+    },
+    "domain" : "42",
+    "attributes" : [ "datatype" ],
+    "id" : "104"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potencia",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "potencia",
+      "en" : "power",
+      "es" : "potencia"
+    },
+    "domain" : "18",
+    "attributes" : [ "datatype" ],
+    "id" : "105"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#caja",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "caja",
+      "en" : "box",
+      "es" : "caja"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Every streetlight can have a box",
+      "es" : "Cada farola puede tener una caja"
+    },
+    "attributes" : [ "object" ],
+    "id" : "106"
+  }, {
+    "iri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#metodoControl",
+    "baseIri" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "metodoControl",
+      "en" : "controlMethod",
+      "es" : "metodoControl"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "107"
+  } ]
+}
