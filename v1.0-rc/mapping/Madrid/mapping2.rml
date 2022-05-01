@@ -13,7 +13,7 @@
 @prefix dct: <http://purl.org/dc/elements/1.1/> .
 @prefix esadm: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/> .
 @prefix schema: <http://schema.org/> .
-@prefix esalumb: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico/> .
+@prefix esalumb: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#> .
 @prefix esequip: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/> .
 @prefix geosparql: <http://www.opengis.net/spec/geosparql/>.
 @prefix geo: <http://www.opengis.net/ont/geosparql#>.
@@ -21,7 +21,7 @@
 
 <#FarolaMap1> a rr:TriplesMap;
     rml:logicalSource [
-        rml:source "DatosAlumbrado.csv" ;
+        rml:source "ULuminosa1.csv" ;
         rml:referenceFormulation ql:CSV
     ];
         rr:subjectMap [
@@ -30,10 +30,9 @@
             rr:class esalumb:farola
         ];
 
-
     rr:predicateObjectMap [
         rr:predicateMap [
-            rr:constant geosparql:geometry;
+            rr:constant esalumb:luminaria;
             rr:termType rr:IRI
         ];
         rr:objectMap [
@@ -46,7 +45,7 @@
 
     rr:predicateObjectMap [
         rr:predicateMap [
-            rr:constant esalumb:luminaria;
+            rr:constant schema:address;
             rr:termType rr:IRI
         ];
         rr:objectMap [
@@ -55,7 +54,8 @@
                 rr:child "codigo"; rr:parent "codigo";
             ]
         ]
-    ];    
+    ];
+    
 
     rr:predicateObjectMap [
        rr:predicate esalumb:codigo;
@@ -67,51 +67,11 @@
 
 
 
+
+
 <#FarolaMap2> a rr:TriplesMap;
     rml:logicalSource [
-        rml:source "DatosAlumbrado.csv" ;
-        rml:referenceFormulation ql:CSV
-    ];
-        rr:subjectMap [
-            rr:template "http://vocab.linkeddata.es/madrid/recurso/urbanismo-infraestructuras/alumbrado-publico/farola/{codigo}/geometry";
-            rr:termType rr:IRI;
-            rr:class geosparql:point
-        ];
-
-    rr:predicateObjectMap [
-       rr:predicate geo:Longitude;
-        rr:objectMap [
-            rml:reference "Longitude"; 
-            rr:datatype geo:wktLiteral;
-        ]
-    ];
-
-    rr:predicateObjectMap [
-       rr:predicate geo:Latitude;
-        rr:objectMap [
-            rml:reference "Latitude"; 
-            rr:datatype geo:wktLiteral;
-        ]
-    ];
-
-    rr:predicateObjectMap [
-        rr:predicateMap [
-            rr:constant schema:address;
-            rr:termType rr:IRI
-        ];
-        rr:objectMap [
-            rr:parentTriplesMap <#FarolaMap5>;
-            rr:joinCondition [
-                rr:child "codigo"; rr:parent "codigo";
-            ]
-        ]
-    ].
-
-
-
-<#FarolaMap3> a rr:TriplesMap;
-    rml:logicalSource [
-        rml:source "DatosAlumbrado.csv" ;
+        rml:source "ULuminosa1.csv" ;
         rml:referenceFormulation ql:CSV
     ];
         rr:subjectMap [
@@ -134,38 +94,19 @@
         ]   
     ].
 
-<#FarolaMap4> a rr:TriplesMap;
+<#FarolaMap3> a rr:TriplesMap;
     rml:logicalSource [
-        rml:source "DatosAlumbrado.csv" ;
+        rml:source "ULuminosa1.csv" ;
         rml:referenceFormulation ql:CSV
     ];
         rr:subjectMap [
-            rr:template "http://vocab.linkeddata.es/madrid/recurso/urbanismo-infraestructuras/alumbrado-publico/farola/{codigo}/lampara";
-            rr:termType rr:IRI;
-            rr:class esalumb:lampara;
-        ];
-
-    rr:predicateObjectMap [
-       rr:predicate esalumb:tipoLampara;
-        rr:objectMap [
-            rml:reference "tipoLampara"; 
-            rr:datatype xsd:string;
-        ]
-    ].
-
-<#FarolaMap5> a rr:TriplesMap;
-    rml:logicalSource [
-        rml:source "DatosAlumbrado.csv" ;
-        rml:referenceFormulation ql:CSV
-    ];
-        rr:subjectMap [
-            rr:template "https://schema.org/PostalAddress/{codigo}";
+            rr:template "http://vocab.linkeddata.es/madrid/recurso/urbanismo-infraestructuras/alumbrado-publico/farola/{codigo}/address";
             rr:termType rr:IRI;
             rr:class schema:address
         ];
 
     rr:predicateObjectMap [
-       rr:predicate esalumb:streetAddress;
+       rr:predicate schema:streetAddress;
         rr:objectMap [
             rml:reference "streetAddress"; 
             rr:datatype xsd:string;
@@ -185,5 +126,73 @@
         rr:objectMap [
             rml:reference "barrio"; 
             rr:datatype xsd:string;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicateMap [
+            rr:constant geosparql:geometry;
+            rr:termType rr:IRI
+        ];
+        rr:objectMap [
+            rr:parentTriplesMap <#FarolaMap5>;
+            rr:joinCondition [
+                rr:child "codigo"; rr:parent "codigo";
+            ]
+        ]
+    ].
+
+<#FarolaMap4> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "ULuminosa1.csv" ;
+        rml:referenceFormulation ql:CSV
+    ];
+        rr:subjectMap [
+            rr:template "http://vocab.linkeddata.es/madrid/recurso/urbanismo-infraestructuras/alumbrado-publico/farola/{codigo}/lampara";
+            rr:termType rr:IRI;
+            rr:class esalumb:lampara;
+        ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:tipoLampara;
+        rr:objectMap [
+            rml:reference "tipoLampara"; 
+            rr:datatype xsd:string;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:modeloBombilla;
+        rr:objectMap [
+            rml:reference "modeloBombilla"; 
+            rr:datatype xsd:string;
+        ]
+    ].
+
+
+<#FarolaMap5> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "ULuminosa1.csv" ;
+        rml:referenceFormulation ql:CSV
+    ];
+        rr:subjectMap [
+            rr:template "http://vocab.linkeddata.es/madrid/recurso/urbanismo-infraestructuras/alumbrado-publico/farola/{codigo}/geometry";
+            rr:termType rr:IRI;
+            rr:class geosparql:point
+        ];
+
+    rr:predicateObjectMap [
+       rr:predicate geo:Longitude;
+        rr:objectMap [
+            rml:reference "Longitude"; 
+            rr:datatype geo:wktLiteral;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate geo:Latitude;
+        rr:objectMap [
+            rml:reference "Latitude"; 
+            rr:datatype geo:wktLiteral;
         ]
     ].
