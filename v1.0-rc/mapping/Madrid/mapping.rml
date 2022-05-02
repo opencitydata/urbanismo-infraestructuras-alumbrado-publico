@@ -12,11 +12,12 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix dct: <http://purl.org/dc/elements/1.1/> .
 @prefix esadm: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/> .
+@prefix esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal> .
 @prefix schema: <http://schema.org/> .
 @prefix esalumb: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#> .
 @prefix esequip: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/> .
 @prefix geosparql: <http://www.opengis.net/spec/geosparql/>.
-@prefix geo: <http://www.opengis.net/ont/geosparql#>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
 
 
 <#FarolaMap1> a rr:TriplesMap;
@@ -45,7 +46,7 @@
 
     rr:predicateObjectMap [
         rr:predicateMap [
-            rr:constant schema:address;
+            rr:constant esdir:direccionPostal;
             rr:termType rr:IRI
         ];
         rr:objectMap [
@@ -105,13 +106,6 @@
             rr:class schema:address
         ];
 
-    rr:predicateObjectMap [
-       rr:predicate schema:streetAddress;
-        rr:objectMap [
-            rml:reference "streetAddress"; 
-            rr:datatype xsd:string;
-        ]
-    ];
 
     rr:predicateObjectMap [
        rr:predicate esadm:distrito;
@@ -131,7 +125,7 @@
 
     rr:predicateObjectMap [
         rr:predicateMap [
-            rr:constant geosparql:geometry;
+            rr:constant schema:PostalAddress;
             rr:termType rr:IRI
         ];
         rr:objectMap [
@@ -171,6 +165,40 @@
 
 
 <#FarolaMap5> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "ULuminosa1.csv" ;
+        rml:referenceFormulation ql:CSV
+    ];
+        rr:subjectMap [
+            rr:template "http://vocab.linkeddata.es/madrid/recurso/urbanismo-infraestructuras/alumbrado-publico/farola/{codigo}/geometry";
+            rr:termType rr:IRI;
+            rr:class schema:address
+        ];
+
+    rr:predicateObjectMap [
+       rr:predicate schema:streetAddress;
+        rr:objectMap [
+            rml:reference "streetAddress"; 
+            rr:datatype xsd:string;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicateMap [
+            rr:constant geosparql:geometry;
+            rr:termType rr:IRI
+        ];
+        rr:objectMap [
+            rr:parentTriplesMap <#FarolaMap6>;
+            rr:joinCondition [
+                rr:child "codigo"; rr:parent "codigo";
+            ]
+        ]
+    ].
+
+
+
+<#FarolaMap6> a rr:TriplesMap;
     rml:logicalSource [
         rml:source "ULuminosa1.csv" ;
         rml:referenceFormulation ql:CSV
