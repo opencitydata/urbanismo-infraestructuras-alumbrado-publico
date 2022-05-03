@@ -46,7 +46,7 @@
 
     rr:predicateObjectMap [
         rr:predicateMap [
-            rr:constant esdir:direccionPostal;
+            rr:constant esdir:DireccionPostal;
             rr:termType rr:IRI
         ];
         rr:objectMap [
@@ -64,8 +64,7 @@
             rml:reference "codigo"; 
             rr:datatype dct:identifier
         ]
-    ].    
-
+    ].
 
 
 
@@ -103,25 +102,25 @@
         rr:subjectMap [
             rr:template "http://vocab.linkeddata.es/madrid/recurso/urbanismo-infraestructuras/alumbrado-publico/farola/{codigo}/address";
             rr:termType rr:IRI;
-            rr:class schema:address
+            rr:class esdir:DireccionPostal
         ];
 
+    rr:predicateObjectMap [
+        rr:predicate esadm:barrio;
+        rr:objectMap [
+            rml:reference "barrio";
+            rr:termType rr:IRI
+        ]
+    ];    
 
     rr:predicateObjectMap [
-       rr:predicate esadm:distrito;
+        rr:predicate esadm:distrito;
         rr:objectMap [
-            rml:reference "distrito"; 
-            rr:datatype xsd:string;
+            rml:reference "distrito";
+            rr:termType rr:IRI
         ]
     ];
 
-    rr:predicateObjectMap [
-       rr:predicate esadm:barrio;
-        rr:objectMap [
-            rml:reference "barrio"; 
-            rr:datatype xsd:string;
-        ]
-    ];
 
     rr:predicateObjectMap [
         rr:predicateMap [
