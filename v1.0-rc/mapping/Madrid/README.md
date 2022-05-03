@@ -8,8 +8,8 @@ Conjunto de datos que se ha obtenido a partir del ayuntamiento de la ciudad de M
 # mapping.rml
 Es el archivo que contiene los datos del csv estructurados, a partir del vocabulario desarrollado, por rmlMapper.
   ## Atributos
-  - tipoLampara: lista skos en la que se encuentra el modelo de lampara que está utilizando la farola.
-  - modeloBombilla: modelo de bombilla concreto que está usando la farola.
+  - tipoLampara: Lista skos en la que se encuentra el modelo de lampara que está utilizando la farola.
+  - modeloBombilla: Modelo de bombilla concreto que está usando la farola.
   - streetAddress: Atributo que represente el tipo de vía, el nombre de la calle y el número de la calle en el que se encuentra la farola.
   - codigo: Representa el código que comparten un número de unidades luminosas que están en la misma calle.
   - distrito: Representa los 21 distritos de Madrid.
