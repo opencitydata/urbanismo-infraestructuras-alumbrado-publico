@@ -19,3 +19,5 @@ Es el archivo que contiene los datos del csv estructurados, a partir del vocabul
 
 # salida.nt
 Es el resultado obtenido tras procesar los datos con rmlmapper.
+- salida.nt: resultado con 300 ejemplos.
+- salidaCorta: resultado con solo 1 ejemplo.
