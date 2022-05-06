@@ -11,7 +11,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix dct: <http://purl.org/dc/elements/1.1/> .
-@prefix esadm: <http://vocab.linkeddata.es/datosabiertos/madrid/> .
+@prefix esadm: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/> .
 @prefix esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
 @prefix schema: <http://schema.org/> .
 @prefix esalumb: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#> .
@@ -59,16 +59,17 @@
 
     rr:predicateObjectMap [
         rr:predicateMap [
-            rr:constant geosparql:Geometry;
+            rr:constant geosparql:geometry;
             rr:termType rr:IRI
         ];
         rr:objectMap [
-            rr:parentTriplesMap <#FarolaMap6>;
+            rr:parentTriplesMap <#FarolaMap5>;
             rr:joinCondition [
                 rr:child "codigo"; rr:parent "codigo";
             ]
         ]
     ];
+
     
 
     rr:predicateObjectMap [
@@ -121,30 +122,41 @@
     rr:predicateObjectMap [
         rr:predicate esadm:barrio;
         rr:objectMap [
-            rml:reference "barrio";
-            rr:termType rr:IRI
+            rr:template "http://vocab.linkeddata.es/madrid/recurso/sector-publico/territorio/barrio/{barrio}";
         ]
     ];    
 
     rr:predicateObjectMap [
         rr:predicate esadm:distrito;
         rr:objectMap [
-            rml:reference "distrito";
-            rr:termType rr:IRI
+            rr:template "http://vocab.linkeddata.es/madrid/recurso/sector-publico/territorio/distrito/{distrito}";
         ]
     ];
 
 
     rr:predicateObjectMap [
-        rr:predicateMap [
-            rr:constant schema:PostalAddress;
-            rr:termType rr:IRI
-        ];
+       rr:predicate schema:streetAddress;
         rr:objectMap [
-            rr:parentTriplesMap <#FarolaMap5>;
-            rr:joinCondition [
-                rr:child "codigo"; rr:parent "codigo";
-            ]
+            rml:reference "streetAddress"; 
+            rr:datatype xsd:string;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate schema:locality;
+        rr:objectMap [
+            rml:reference "locality"; 
+            rr:datatype xsd:string;
+        ]
+    ];
+
+
+
+    rr:predicateObjectMap [
+       rr:predicate schema:country;
+        rr:objectMap [
+            rml:reference "country"; 
+            rr:datatype xsd:string;
         ]
     ].
 
@@ -177,44 +189,8 @@
     ].
 
 
+
 <#FarolaMap5> a rr:TriplesMap;
-    rml:logicalSource [
-        rml:source "ULuminosa-csv1.csv" ;
-        rml:referenceFormulation ql:CSV
-    ];
-        rr:subjectMap [
-            rr:template "http://vocab.linkeddata.es/madrid/recurso/urbanismo-infraestructuras/alumbrado-publico/farola/{codigo}/postalAddress";
-            rr:termType rr:IRI;
-            rr:class schema:PostalAddress
-        ];
-
-    rr:predicateObjectMap [
-       rr:predicate schema:streetAddress;
-        rr:objectMap [
-            rml:reference "streetAddress"; 
-            rr:datatype xsd:string;
-        ]
-    ];
-
-    rr:predicateObjectMap [
-       rr:predicate schema:locality;
-        rr:objectMap [
-            rml:reference "locality"; 
-            rr:datatype xsd:string;
-        ]
-    ];
-
-    rr:predicateObjectMap [
-       rr:predicate schema:country;
-        rr:objectMap [
-            rml:reference "country"; 
-            rr:datatype xsd:string;
-        ]
-    ].
-
-
-
-<#FarolaMap6> a rr:TriplesMap;
     rml:logicalSource [
         rml:source "ULuminosa-csv1.csv" ;
         rml:referenceFormulation ql:CSV
@@ -222,14 +198,14 @@
         rr:subjectMap [
             rr:template "http://vocab.linkeddata.es/madrid/recurso/urbanismo-infraestructuras/alumbrado-publico/farola/{codigo}/geometry";
             rr:termType rr:IRI;
-            rr:class geosparql:Point
+            rr:class geosparql:Geometry
         ];
 
     rr:predicateObjectMap [
        rr:predicate geo:Longitude;
         rr:objectMap [
             rml:reference "Longitude"; 
-            rr:datatype geo:wktLiteral;
+            rr:datatype xsd:double;
         ]
     ];
 
@@ -237,6 +213,7 @@
        rr:predicate geo:Latitude;
         rr:objectMap [
             rml:reference "Latitude"; 
-            rr:datatype geo:wktLiteral;
+            rr:datatype xsd:double;
         ]
     ].
+
