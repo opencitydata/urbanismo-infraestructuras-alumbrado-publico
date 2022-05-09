@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="Electron" modified="2022-05-04T15:26:49.400Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/17.4.2 Chrome/100.0.4896.60 Electron/18.0.1 Safari/537.36" etag="Zs6y8uXj53_ESPjbUul_" version="17.4.2" type="device">
+<mxfile host="Electron" modified="2022-05-09T14:42:24.128Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/18.0.1 Chrome/100.0.4896.143 Electron/18.2.0 Safari/537.36" etag="7i6giBgbJJoiki7DeOEB" version="18.0.1" type="device">
   <diagram id="e428gesRJKgHhVkrDnYT" name="Página-2">
     <mxGraphModel dx="2932" dy="1818" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -186,13 +186,13 @@
         <mxCell id="F7zj1IGawAUC-YgU3Szz-7" value="skos:Concept&amp;lt;&amp;lt;inScheme&amp;lt;&amp;lt;skos-esalumb:tipoAlimentacion&amp;gt;&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="gFt_EBzvBKmSdwnH_T5e-1" vertex="1">
           <mxGeometry x="-280" y="720" width="200" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="OZpx7c7yXWTA_iKWI5jT-0" value="skos:Concept&amp;lt;&amp;lt;inScheme&amp;lt;&amp;lt;skos-esalumb:holderType&amp;gt;&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="gFt_EBzvBKmSdwnH_T5e-1" vertex="1">
+        <mxCell id="OZpx7c7yXWTA_iKWI5jT-0" value="skos:Concept&amp;lt;&amp;lt;inScheme&amp;lt;&amp;lt;skos-esalumb:tipoSoporte&amp;gt;&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="gFt_EBzvBKmSdwnH_T5e-1" vertex="1">
           <mxGeometry x="-1130" y="477.5" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="OZpx7c7yXWTA_iKWI5jT-1" value="skos:Concept&amp;lt;&amp;lt;inScheme&amp;lt;&amp;lt;skos-esalumb:luminaryType&amp;gt;&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="gFt_EBzvBKmSdwnH_T5e-1" vertex="1">
+        <mxCell id="OZpx7c7yXWTA_iKWI5jT-1" value="skos:Concept&amp;lt;&amp;lt;inScheme&amp;lt;&amp;lt;skos-esalumb:tipoLuminaria&amp;gt;&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="gFt_EBzvBKmSdwnH_T5e-1" vertex="1">
           <mxGeometry x="-1130" y="650" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="OZpx7c7yXWTA_iKWI5jT-2" value="skos:Concept&amp;lt;&amp;lt;inScheme&amp;lt;&amp;lt;skos-esalumb:lampType&amp;gt;&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="gFt_EBzvBKmSdwnH_T5e-1" vertex="1">
+        <mxCell id="OZpx7c7yXWTA_iKWI5jT-2" value="skos:Concept&amp;lt;&amp;lt;inScheme&amp;lt;&amp;lt;skos-esalumb:tipoLampara&amp;gt;&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="gFt_EBzvBKmSdwnH_T5e-1" vertex="1">
           <mxGeometry x="-1130" y="920" width="220" height="60" as="geometry" />
         </mxCell>
         <mxCell id="OZpx7c7yXWTA_iKWI5jT-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="gFt_EBzvBKmSdwnH_T5e-1" source="F7zj1IGawAUC-YgU3Szz-6" target="F7zj1IGawAUC-YgU3Szz-6" edge="1">
@@ -257,7 +257,7 @@
         <mxCell id="OZpx7c7yXWTA_iKWI5jT-14" value="skos:Concept&lt;br&gt;&amp;lt;&amp;lt;inScheme schemename&amp;gt;&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="gFt_EBzvBKmSdwnH_T5e-1" vertex="1">
           <mxGeometry x="320" y="1010" width="165" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="NA6J5VV9slNVHM2t9638-6" value="skos:Concept&amp;lt;&amp;lt;inScheme&amp;lt;&amp;lt;skos-esalumb:cableType&amp;gt;&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="gFt_EBzvBKmSdwnH_T5e-1" vertex="1">
+        <mxCell id="NA6J5VV9slNVHM2t9638-6" value="skos:Concept&amp;lt;&amp;lt;inScheme&amp;lt;&amp;lt;skos-esalumb:tipoCable&amp;gt;&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="gFt_EBzvBKmSdwnH_T5e-1" vertex="1">
           <mxGeometry x="-1130" y="340" width="220" height="60" as="geometry" />
         </mxCell>
         <mxCell id="NA6J5VV9slNVHM2t9638-8" value="tipoCable(1..1)" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="gFt_EBzvBKmSdwnH_T5e-1" source="qGrU05ty7huBXTV7_1Z9-4" target="NA6J5VV9slNVHM2t9638-6" edge="1">
