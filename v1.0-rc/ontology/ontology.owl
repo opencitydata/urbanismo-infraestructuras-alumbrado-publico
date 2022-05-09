@@ -36,6 +36,14 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal xml:lang="en">Esta versión ha sido generada durante el desarrollo del trabajo fin de grado</Literal>
     </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <Literal xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico/index-en.html</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <Literal xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico/index-en.html</Literal>
+    </Annotation>
     <Declaration>
         <Class IRI="http://schema.org#PostalAddress"/>
     </Declaration>
@@ -306,15 +314,15 @@
         <Class abbreviatedIRI="geosparql:Feature"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="geosparql:Point"/>
-        <Class abbreviatedIRI="geosparql:Geometry"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="geosparql:SpatialObject"/>
         <Class abbreviatedIRI="geosparql:Feature"/>
+        <Class abbreviatedIRI="geosparql:SpatialObject"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="geosparql:Geometry"/>
         <Class abbreviatedIRI="geosparql:SpatialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="geosparql:Point"/>
         <Class abbreviatedIRI="geosparql:Geometry"/>
     </SubClassOf>
     <ClassAssertion>
@@ -437,6 +445,10 @@
         <ObjectProperty abbreviatedIRI="geosparql:hasGeometry"/>
         <Class abbreviatedIRI="geosparql:Geometry"/>
     </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#numeroDeBrazos"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
     <DataPropertyDomain>
         <DataProperty IRI="http://schema.org/addressCountry"/>
         <Class IRI="http://schema.org#PostalAddress"/>
@@ -676,7 +688,22 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://schema.org#PostalAddress</IRI>
-        <Literal>https://schema.org/</Literal>
+        <Literal xml:lang="en">https://schema.org/PostalAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://schema.org#PostalAddress</IRI>
+        <Literal xml:lang="es">https://schema.org/PostalAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://schema.org/address</IRI>
+        <Literal xml:lang="en">https://schema.org/PostalAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://schema.org/address</IRI>
+        <Literal xml:lang="es">https://schema.org/PostalAddress</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -687,6 +714,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://schema.org/addressCountry</IRI>
         <Literal xml:lang="en">The country</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://schema.org/addressCountry</IRI>
+        <Literal xml:lang="en">https://schema.org/addressCountry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://schema.org/addressCountry</IRI>
+        <Literal xml:lang="es">https://schema.org/addressCountry</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -709,6 +746,16 @@
         <Literal xml:lang="en">The locality in wich the street address is</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://schema.org/addressLocality</IRI>
+        <Literal xml:lang="en">https://schema.org/addressLocality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://schema.org/addressLocality</IRI>
+        <Literal xml:lang="es">https://schema.org/addressLocality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://schema.org/addressLocality</IRI>
         <Literal xml:lang="en">addressLocality</Literal>
@@ -717,6 +764,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://schema.org/addressLocality</IRI>
         <Literal xml:lang="es">addressLocality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://schema.org/streetAddress</IRI>
+        <Literal xml:lang="en">https://schema.org/streetAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://schema.org/streetAddress</IRI>
+        <Literal xml:lang="es">https://schema.org/streetAddress</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1214,6 +1271,11 @@
         <Literal xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructura/equipamiento-municipal</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>esequip:Equipamiento</AbbreviatedIRI>
+        <Literal xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructura/equipamiento-municipal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>esequip:Equipamiento</AbbreviatedIRI>
         <Literal xml:lang="es">Equipamiento</Literal>
@@ -1232,6 +1294,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaAlta</IRI>
         <Literal xml:lang="es">Fecha en la que la farola fue instalada</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaAlta</IRI>
+        <Literal xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaAlta</IRI>
+        <Literal xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1254,6 +1326,16 @@
         <Literal xml:lang="es">Día en el que la farola es desinstalada</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaBaja</IRI>
+        <Literal xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaBaja</IRI>
+        <Literal xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaBaja</IRI>
         <Literal xml:lang="en">endingDate</Literal>
@@ -1272,6 +1354,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaRevision</IRI>
         <Literal xml:lang="es">Día en el que la farola tiene una revision</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaRevision</IRI>
+        <Literal xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaRevision</IRI>
+        <Literal xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1304,6 +1396,11 @@
         <Literal xml:lang="es">id</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/def/secctor-public/territorio#Barrio</IRI>
+        <Literal xml:lang="es">Subdivisión con identidad propia de una ciudad o pueblo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://vocab.linkeddata.es/def/secctor-public/territorio#Barrio</IRI>
         <Literal>http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/index-en.html</Literal>
@@ -1321,7 +1418,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://vocab.linkeddata.es/def/secctor-public/territorio#Distrito</IRI>
-        <Literal>http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/index-en.html</Literal>
+        <Literal xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/index-en.html</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/def/secctor-public/territorio#Distrito</IRI>
+        <Literal xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/index-en.html</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1334,19 +1436,44 @@
         <Literal xml:lang="es">Distrito</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.opengis.net/spec/geosparql#Longitude</IRI>
+        <Literal xml:lang="es">La longitud WGS84 para un SpatialThing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.opengis.net/spec/geosparql#Longitude</IRI>
+        <Literal xml:lang="en">The WGS84 longitude of a SpatialThing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.opengis.net/spec/geosparql#Longitude</IRI>
         <Literal xml:lang="en">Longitude</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>geosparql:Feature</AbbreviatedIRI>
-        <Literal xml:lang="en">Location pattern  of the streetlights</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.opengis.net/spec/geosparql#Longitude</IRI>
+        <Literal xml:lang="es">Longitude</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>geosparql:Feature</AbbreviatedIRI>
-        <Literal xml:lang="es">Patrón de localización de las farolas</Literal>
+        <Literal xml:lang="es">Esta clase representa el nivel máximo del tipo feature. Es superclase de todos los tipos de features.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>geosparql:Feature</AbbreviatedIRI>
+        <Literal xml:lang="en">This class represents the top-level feature type. It is superclass of all feature types.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geosparql:Feature</AbbreviatedIRI>
+        <Literal xml:lang="en">http://www.opengis.net/spec/geosparql/1.1/req/core/feature-class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geosparql:Feature</AbbreviatedIRI>
+        <Literal xml:lang="es">http://www.opengis.net/spec/geosparql/1.1/req/core/feature-class</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1359,20 +1486,84 @@
         <Literal xml:lang="en">Geometry represents the top level geometry type.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geosparql:Geometry</AbbreviatedIRI>
+        <Literal xml:lang="en">http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geosparql:Geometry</AbbreviatedIRI>
+        <Literal xml:lang="es">http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>geosparql:Latitude</AbbreviatedIRI>
+        <Literal xml:lang="es">La latitud WGS84 de un SpatialThing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>geosparql:Latitude</AbbreviatedIRI>
+        <Literal xml:lang="en">The WGS84 latitude of a SpatialThing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>geosparql:Latitude</AbbreviatedIRI>
         <Literal xml:lang="en">Latitude</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>geosparql:Latitude</AbbreviatedIRI>
+        <Literal xml:lang="es">Latitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>geosparql:SpatialObject</AbbreviatedIRI>
-        <Literal xml:lang="es">Spatial Object representa todo lo que tenga una representación espacial</Literal>
+        <AbbreviatedIRI>geosparql:Point</AbbreviatedIRI>
+        <Literal xml:lang="en">A class for representating a point definied by longitude and latitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>geosparql:Point</AbbreviatedIRI>
+        <Literal xml:lang="es">Clase que representa un punto definido por una longitud y latitud</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>geosparql:SpatialObject</AbbreviatedIRI>
-        <Literal xml:lang="en">Spatial Object represents everything that can
-have a spatial representation</Literal>
+        <Literal xml:lang="es">Spatial Object representa todo lo que tenga una representación espacial. Es la superclase de feature y de geometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>geosparql:SpatialObject</AbbreviatedIRI>
+        <Literal xml:lang="en">Spatial Object represents everything that can have a spatial representation. It is superclass of feature and geometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geosparql:SpatialObject</AbbreviatedIRI>
+        <Literal xml:lang="en">http://www.opengis.net/spec/geosparql/1.1/req/core/spatial-object-class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geosparql:SpatialObject</AbbreviatedIRI>
+        <Literal xml:lang="es">http://www.opengis.net/spec/geosparql/1.1/req/core/spatial-object-class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geosparql:hasGeometry</AbbreviatedIRI>
+        <Literal xml:lang="en">A spatial representation for a given Feature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geosparql:hasGeometry</AbbreviatedIRI>
+        <Literal xml:lang="es">Una representación espacial para un Feature dado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geosparql:hasGeometry</AbbreviatedIRI>
+        <Literal xml:lang="en">http://www.opengis.net/ont/geosparql#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geosparql:hasGeometry</AbbreviatedIRI>
+        <Literal xml:lang="es">http://www.opengis.net/ont/geosparql#</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
