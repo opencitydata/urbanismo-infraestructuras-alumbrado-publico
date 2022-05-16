@@ -1,0 +1,101 @@
+@base <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico> .
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix transit: <http://vocab.org/transit/terms/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dct: <http://purl.org/dc/elements/1.1/> .
+@prefix esadm: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/> .
+@prefix esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
+@prefix schema: <http://schema.org/> .
+@prefix esalumb: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#> .
+@prefix esequip: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/> .
+@prefix geosparql: <http://www.opengis.net/spec/geosparql/>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+
+
+<#FarolaMap1> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "Equip.csv" ;
+        rml:referenceFormulation ql:CSV
+    ];
+        rr:subjectMap [
+            rr:template "http://vocab.linkeddata.es/madrid/recurso/urbanismo-infraestructuras/alumbrado-publico/farola/{codigo}";
+            rr:termType rr:IRI;
+            rr:class esalumb:Farola
+        ];
+
+    rr:predicateObjectMap [
+        rr:predicateMap [
+            rr:constant esequip:equipamiento;
+            rr:termType rr:IRI
+        ];
+        rr:objectMap [
+            rr:parentTriplesMap <#FarolaMap2>;
+            rr:joinCondition [
+                rr:child "codigo"; rr:parent "codigo";
+            ]
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:anchura;
+        rr:objectMap [
+            rml:reference "anchura"; 
+            rr:datatype xsd:string;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:altura;
+        rr:objectMap [
+            rml:reference "altura"; 
+            rr:datatype xsd:string;
+        ]
+    ];  
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:gabineteDeControl;
+        rr:objectMap [
+            rml:reference "gabineteDeControl"; 
+            rr:datatype xsd:string;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate dct:identifier;
+        rr:objectMap [
+            rml:reference "codigo"; 
+            rr:datatype xsd:string;
+        ]
+    ]. 
+
+
+
+
+<#FarolaMap2> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "Equip.csv" ;
+        rml:referenceFormulation ql:CSV
+    ];
+        rr:subjectMap [
+            rr:template "http://vocab.linkeddata.es/madrid/recurso/urbanismo-infraestructuras/alumbrado-publico/farola/{codigo}/equipamiento";
+            rr:termType rr:IRI;
+            rr:class esequip:Equipamiento;
+        ];
+
+    rr:predicateObjectMap [
+       rr:predicate dct:identifier;
+        rr:objectMap [
+            rml:reference "id"; 
+            rr:datatype xsd:string;
+        ]
+    ].
+
+
