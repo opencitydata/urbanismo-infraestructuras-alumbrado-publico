@@ -398,7 +398,146 @@ This ontology has the following classes and properties.</span>
    <img src="resources/images/lightingDiagram.png"width="1511" heigh="631">
    <figcaption>Figure 1.- Vocabulary for the representation of the streetlight data </figcaption>
 </center>
-<h3> 3.1 Examples
+<p>Now we are going to split the vocabulary in patterns. </p>
+
+<h3> 3.1 Geo pattern
+   <span class="backlink"> Back to <a href="#toc">índice</a>
+   </span>   
+</h3>
+<p>The <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento"title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento">Equipment</a> class is a subclass of <a href="https://www.opengis.net/doc/IS/geosparql/1.0#Feature">geosparql:Feature</a> class that belongs to the geolocation pattern.</p>
+<p>The location pattern is formed by the geo and geosparql vocabularies. To obtain the geolaction we use the object property <a href="#http://www.opengis.net/spec/geosparql/hasGeometry" title="http://www.opengis.net/spec/geosparql/hasGeometry">has geometry</a> that is related with the <a href="#http://www.opengis.net/spec/geosparql/Geometry" title="http://www.opengis.net/spec/geosparql/Geometry">geosparql:Geometry</a> class.
+The <a href="#http://www.opengis.net/spec/geosparql/Point" title="http://www.opengis.net/spec/geosparql/Point">geosparql:Point</a> class is a subclass of the Geometry class and has the attributes <a title="http://www.opengis.net/spec/geosparql/Longitude">Longitude</a> and <a title="http://www.opengis.net/spec/geosparql/Latitude">Latitude</a> which refer to the coordinate x and coordinate y from the streetlight.
+</p>
+
+<center> 
+   <img src="resources/images/Geo pattern.png"width="700" heigh="300">
+   <figcaption>Figure 2.-Geolocation of the streetlights using the Geo pattern</figcaption>
+</center>
+
+<p> 
+  An example of geolocation is shown below with the attributes <a href="#http://www.opengis.net/spec/geosparql/Latitude" title="http://www.opengis.net/spec/geosparql/Latitude">Latitude</a> and <a href="#http://www.opengis.net/spec/geosparql#Longitude" title="http://www.opengis.net/spec/geosparql#Longitude">Longitude</a> that belong to the <b>Point</b> class.
+</p>
+
+<pre> 
+   <code> 
+      &#60;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola&#62; a esalumb:Streetlight;
+      geo:Lat "4480670.67020000000"^^xsd:double;
+      geo:Lon "445648.48120000000"^^xsd:double;
+   </code>
+</pre>
+
+<h3> 3.2 Equipment pattern
+   <span class="backlink"> Back to <a href="#toc">índice</a>
+   </span>   
+</h3>
+<p>The equipment pattern is formed by the esequip vocabulary.To obtain the equipment we have the <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">esalumb:Streetlight</a> class that is a subclass from the <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento"title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento">Equipment</a> class that is used in the municipal equipments that defines the following attributes
+<a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaAlta"title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaAlta">startingDate</a> which refers to the date when the streetlight was installed, <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaBaja"title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaBaja">endingDate</a> which refers to the date when the streetlight was desinstalled, <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/id"title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/id">id</a> which refers to the id that has every streetlight.</p>
+
+<center> 
+   <img src="resources/images/Equipment pattern.png"width="400" heigh="100">
+   <figcaption>Figure 3.- Pattern of the equipment </figcaption>
+</center>
+
+
+<p>An example with attributes from the <b>Equipment</b> class and from the <b>Streetlight</b> class is shown below.</p>
+<p>In this case from the class that represent the municipal equipment we have the identifier that is unique for every streetlight. From the streetlight class we have three attributes: the maximun heigh of the streetlight, the width from one luminary to the opposite one and the control cabinet where the streetlights are controlled.</p>
+
+<pre> 
+   <code> 
+      &#60;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola&#62; a esalumb:Farola;
+      esequip:id "1"^^xsd:string;
+      esalumb:width "3"^^xsd:string;
+      esalumb:heigh "6"^^xsd:string;
+      esalumb:controlCabinet "Caseta de Camineros "^^xsd:string;
+   </code>
+</pre>
+
+<h3> 3.3 Pattern for the location using the administratuve territory and with the schema
+   <span class="backlink"> Back to <a href="#toc">índice</a>
+   </span>   
+</h3>
+<p>The pattern of the administrative teritory is formed by the esdir vocabulary and the schema pattern is formed by the schema vocabulary.</p>
+<p>The <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">esalumb:Streetlight</a> class is related with the <a href="#http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal">DireccionPostal</a> class with the
+<a href="#http://schema.org/address" title="http://schema.org/address">address</a> object property.</p>
+<p>The DireccionPostal class has two properties <a href="#http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/barrio"title="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/barrio">neighborhood</a> and <a href="#http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/distrito"title="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/distrito">district</a>, defined by the <b>esadm</b> vocabulary, that are related with the
+<a href="#http://vocab.linkeddata.es/def/sector-publico/territorio#Barrio"title="http://vocab.linkeddata.es/def/sector-publico/territorio#Barrio">Neighborhood</a> and <a href="#http://vocab.linkeddata.es/def/sector-publico/territorio#Distrito"title="http://vocab.linkeddata.es/def/sector-publico/territorio#Distrito">District</a> classes that refer to the neighborhoodand to the district where the streetlight is located.</p>
+<p>The DireccionPostal class is a subclass of the <a href="#http://schema.org#PostalAddress" title="http://schema.org#PostalAddress">PostalAddress</a> class defined by the schema vocabulary and it has as attributes <a href="#http://schema.org/streetAddress" title="http://schema.org/streetAddress">streetAddress</a> that refers to the complete name of the street including the number and the venue type where the streetlight is located, <a href="#http://schema.org/addressCountry" title="http://schema.org/addressCountry">addressCountry</a> refers to the country where the streetlight is located and <a href="#http://schema.org/addressLocality" title="http://schema.org/addressLocality">addressLocality</a> that refers to the locality where the streetlight is located.</p>
+
+<center> 
+   <img src="resources/images/Location pattern.png"width="900" heigh="400">
+   <figcaption>Figure 4.- Pattern for the location using the administratuve territory and with the schema </figcaption>
+</center>
+
+<p>An example with the attributes from the <b>DireccionPostal</b>, <b>PostalAddress</b>, <b>Neighborhood</b> and <b>District</b> classes is shown below.</p>
+<p>The neighborhood class represents the neighborhood where the streetlight is located. The district class represents the district where the stretlight is located. The PostalAddress class has three attributes: the first one streetAddres refers to the complete name of the street including the number and the venue type where the streetlight is located, the second attribute addressLocality is refered to the locality where the streetlight is located andthe last attribute addressCountry is refered to the country where the streetlight is located.</p>
+
+
+<pre> 
+   <code> 
+      &#60;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola&#62; a esalumb:Farola;
+      esalumb:code "11116178"^^xsd:string;
+      schema:streetAddress "CALLE DE GOMEZNARRO 54"^^xsd:string;
+      schema:locality "Madrid"^^xsd:string;
+      schema:country "España"^^xsd string;
+      esadm:district &#60;http://vocab.linkeddata.es/madrid/recurso/sector-publico/territorio/distrito/Hortaleza&#62;;
+      esadm:neighborhood &#60;http://vocab.linkeddata.es/madrid/recurso/sector-publico/territorio/barrio/3&#62;;
+   </code>
+</pre>
+
+<h3> 3.4 Description of the streetlight components
+   <span class="backlink"> Back to <a href="#toc">índice</a>
+   </span>   
+</h3>
+<p>The <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">esalumb:Streetlight</a> class is related with the parts that make up the streetligth with the properties <a href="#caja"title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#caja">box</a>, <a href="#poste"title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#poste">pole</a> and <a href="#luminaria"title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#luminaria">luminary</a>.
+The lamp is related to the luminary using the <a href="#tieneLampara"title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneLampara">hasLamp</a></a> property.</p>
+<p>We can also see that the classes have skos lists, the <a href="#Caja"title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Caja">Box</a> class has the skos list that represents the different types of cables that a streetlight can have <a href="#http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoCable"title="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoCable">cableType</a>,
+the <a href="#Poste"title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste">Pole</a> class has a skos list that represents the diferent types of holders that a streetlight can have <a href="#http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoSoporte"title="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoSoporte">holderType</a>,
+the <a href="#Luminaria"title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria">Luminary</a> class has a skos list that represents the the different types of luminaries that a streetlight can have <a href="#http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoLuminaria"title="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoLuminaria">luminaryType</a> and lastly
+the <a href="#Lampara"title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara">Lamp</a> class has a skos list that represents the different types of lamps that a streetlight can have <a href="#http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoLampara"title="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoLampara">lampType</a>.</p>
+
+<center> 
+   <img src="resources/images/streetlight parts.png"width="900" heigh="500">
+   <figcaption>Figure 5.- Description of the streetlight components </figcaption>
+</center>
+
+<p>We have an example with the use of the skos lists and the <b>Luminary</b> class.</p>
+<p>We have a holderType skos list that represents the diferent types of holders that a streetlight can have, another skos list for the lampType that represents the different types of lamps that a streetlight can have and the last list is for the luminaryType that represents the the different types of luminaries that a streetlight can have. We also have an attribute that represents the number of luminaries that a streetlight can have.</p>
+
+<pre> 
+   <code> 
+      &#60;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola&#62; a esalumb:Farola;
+      esalumb:holderType &#60;http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-soporte/poste&#62;;
+      esalumb:lampType &#60;http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/led&#62;;
+      esalumb:luminaryType &#60;http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-luminaria/proyector&#62;;
+      esalumb:numberOfLuminaries "1"^^xsd:string;
+   </code>
+</pre>
+
+<h3> 3.5 Description for the streetlight skos lists
+   <span class="backlink"> Back to <a href="#toc">índice</a>
+   </span>   
+</h3>
+<p>The <a href="#Farola" title="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola">esalumb:Streetlight</a> class is related to three types of skos lists, the first one <a href="#http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoAlimentacion"title="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoAlimentacion">powerType</a> that refers to the different types of sources a streetlight can have,
+the second one <a href="#http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoIluminacion"title="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoIluminacion">iluminationType</a> tht refers to the different types of ilumination a strretlight can have and lastly <a href="#http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoAlumbrado"title="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoAlumbrado">lightingType</a> that refers to the diferents type of lighting that a streetlight can have.</p>
+
+<center> 
+   <img src="resources/images/skos lists.png"width="500" heigh="300">
+   <figcaption>Figure 6.- Description for the streetlight skos lists </figcaption>
+</center>
+
+<p>In this example we can see how the three skos lists that the <b>Streetlight</b> class has.</p>
+
+<pre> 
+   <code> 
+      &#60;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola&#62; a esalumb:Farola;
+      esalumb:code "2023"^^xsd:string;
+      esalumb:powerType &#60;http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alimentacion/subterranea&#62;;
+      esalumb:iluminationType &#60;http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-iluminacion/permanente&#62;;
+      esalumb:lightingType &#60;http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-alumbrado/s1&#62;;
+   </code>
+</pre>
+
+<h3> 3.6 Examples
    <span class="backlink"> Go back <a href="#toc">índice</a>
    </span>   
 </h3>
@@ -431,10 +570,10 @@ With the goal of making easier to understand the use of some of these classes an
       schema:streetAddress "CALLE DE LAS ERAS 3"^^xsd:string;
       schema:locality "Madrid"^^xsd:string;
       schema:country "España"^^xsd string;
-      esadm:distrito &#60;http://vocab.linkeddata.es/madrid/recurso/sector-publico/territorio/distrito/Hortaleza&#62;;
-      esadm:barrio &#60;http://vocab.linkeddata.es/madrid/recurso/sector-publico/territorio/barrio/4&#62;;
-      esalumb:tipoLampara &#60;http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/descarga&#602;;
-      esequip:modeloBombilla "LBE002"^^xsd:string;
+      esadm:district &#60;http://vocab.linkeddata.es/madrid/recurso/sector-publico/territorio/distrito/Hortaleza&#62;;
+      esadm:neighborhood &#60;http://vocab.linkeddata.es/madrid/recurso/sector-publico/territorio/barrio/4&#62;;
+      esalumb:lampType &#60;http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/descarga&#602;;
+      esequip:bulModel "LBE002"^^xsd:string;
       geo:Lat "4480670.67020000000"^^xsd:double;
       geo:Lon "445648.48120000000"^^xsd:double;
    </code>
