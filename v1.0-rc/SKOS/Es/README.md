@@ -6,6 +6,7 @@
 - tipoLuminaria: Lista skos que representa el tipo de luminaria que tiene una farola.
 - tipoSoporte: Lista skos que representa los tipos de soportes o sujeciones que usan las farolas.
 - tipoIluminacion: Lista skos que representa si las farolas emiten luz de forma permanente o solo por la noche.
+- tipoCable: Lista skos que representa los distintos tipos de cable que puede usar el alumbrado público.
 
 Para poder realizar estas listas se han sacado los datos de las siguiente fuentes:
 - https://www.madrid.es/UnidadesDescentralizadas/UDCUrbanismo/PGOUM/InstruccionViaPublica/Ficheros/fic10.3.pdf
