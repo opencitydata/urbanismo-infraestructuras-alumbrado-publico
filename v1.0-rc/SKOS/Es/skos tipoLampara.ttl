@@ -16,6 +16,8 @@ skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infra
 skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/halogenurometalico>
 skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/ceramico>
 skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/led>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/descarga>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/led-descarga>
 skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/mastercolour>
 skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/fluorescente>
 skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/halogenoincandescente>
@@ -55,6 +57,16 @@ skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestru
 <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/led> a skos:Concept;
 skos:notation "LED"
 skos:prefLabel "LED"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara>
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/descarga> a skos:Concept;
+skos:notation "DESCARGA"
+skos:prefLabel "DESCARGA"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara>
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/led-descarga> a skos:Concept;
+skos:notation "LED-DESCARGA"
+skos:prefLabel "LED-DESCARGA"
 skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara>
 
 <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/mastercolour> a skos:Concept;
