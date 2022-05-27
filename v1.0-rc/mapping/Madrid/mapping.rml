@@ -70,8 +70,106 @@
         ]
     ];
 
-    
+    r:predicateObjectMap [
+        rr:predicateMap [
+            rr:constant esalumb:poste;
+            rr:termType rr:IRI
+        ];
+        rr:objectMap [
+            rr:parentTriplesMap <#FarolaMap6>;
+            rr:joinCondition [
+                rr:child "identifier"; rr:parent "identifier";
+            ]
+        ]
+    ];
 
+    r:predicateObjectMap [
+        rr:predicateMap [
+            rr:constant esalumb:caja;
+            rr:termType rr:IRI
+        ];
+        rr:objectMap [
+            rr:parentTriplesMap <#FarolaMap7>;
+            rr:joinCondition [
+                rr:child "identifier"; rr:parent "identifier";
+            ]
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:gabineteDeControl;
+        rr:objectMap [
+            rml:reference "gabineteDeControl"; 
+            rr:datatype xsd:string;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:propietario;
+        rr:objectMap [
+            rml:reference "propietario"; 
+            rr:datatype xsd:string;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:propietario;
+        rr:objectMap [
+            rml:reference "metodoDeControl"; 
+            rr:datatype xsd:string;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:altura;
+        rr:objectMap [
+            rml:reference "altura"; 
+            rr:datatype xsd:float;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:anchura;
+        rr:objectMap [
+            rml:reference "anchura"; 
+            rr:datatype xsd:float;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:horasDeFuncionamiento;
+        rr:objectMap [
+            rml:reference "horasDeFuncionamiento"; 
+            rr:datatype xsd:duration;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:tipoAlimentacion;
+        rr:objectMap [
+            rml:reference "tipoAlimentacion"; 
+            rr:datatype xsd:string;
+            rr:termType rr:IRI;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:tipoIluminacion;
+        rr:objectMap [
+            rml:reference "tipoIluminacion"; 
+            rr:datatype xsd:string;
+            rr:termType rr:IRI;
+        ]
+    ];
+    rr:predicateObjectMap [
+       rr:predicate esalumb:tipoAlumbrado;
+        rr:objectMap [
+            rml:reference "tipoAlumbrado"; 
+            rr:datatype xsd:string;
+            rr:termType rr:IRI;
+        ]
+    ];
+    
     rr:predicateObjectMap [
        rr:predicate dct:identifier;
         rr:objectMap [
@@ -94,6 +192,30 @@
             rr:class esalumb:Luminaria;
         ];
 
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:fabricante;
+        rr:objectMap [
+            rml:reference "fabricante"; 
+            rr:datatype xsd:string;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:material;
+        rr:objectMap [
+            rml:reference "material"; 
+            rr:datatype xsd:string;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:numeroDeLuminarias;
+        rr:objectMap [
+            rml:reference "numeroDeLuminarias"; 
+            rr:datatype xsd:int;
+        ]
+    ];
 
     rr:predicateObjectMap [
         rr:predicateMap [
@@ -179,6 +301,61 @@
     ];
 
     rr:predicateObjectMap [
+       rr:predicate esalumb:fabricante;
+        rr:objectMap [
+            rml:reference "fabricante"; 
+            rr:datatype xsd:string;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:material;
+        rr:objectMap [
+            rml:reference "material"; 
+            rr:datatype xsd:string;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:numeroDeLamparas;
+        rr:objectMap [
+            rml:reference "NumeroDeLamparas"; 
+            rr:datatype xsd:int;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:consumo;
+        rr:objectMap [
+            rml:reference "consumo"; 
+            rr:datatype xsd:string;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:intensidadLuminica;
+        rr:objectMap [
+            rml:reference "intensidadLuminica"; 
+            rr:datatype xsd:string;
+        ]
+    ];
+    rr:predicateObjectMap [
+       rr:predicate esalumb:potencia1;
+        rr:objectMap [
+            rml:reference "potencia1"; 
+            rr:datatype xsd:string;
+        ]
+    ];
+
+     rr:predicateObjectMap [
+       rr:predicate esalumb:potencia2;
+        rr:objectMap [
+            rml:reference "potencia2"; 
+            rr:datatype xsd:string;
+        ]
+    ];
+
+    rr:predicateObjectMap [
        rr:predicate esalumb:modeloBombilla;
         rr:objectMap [
             rml:reference "modeloBombilla"; 
@@ -212,6 +389,114 @@
         rr:objectMap [
             rml:reference "lat"; 
             rr:datatype xsd:double;
+        ]
+    ].
+
+
+<#FarolaMap6> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "ULuminosa-csv.csv" ;
+        rml:referenceFormulation ql:CSV
+    ];
+        rr:subjectMap [
+            rr:template "http://vocab.linkeddata.es/madrid/recurso/urbanismo-infraestructuras/alumbrado-publico/farola/{identifier}/poste";
+            rr:termType rr:IRI;
+            rr:class esalumb:Poste;
+        ];
+
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:fabricante;
+        rr:objectMap [
+            rml:reference "fabricante"; 
+            rr:datatype xsd:string;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:material;
+        rr:objectMap [
+            rml:reference "material"; 
+            rr:datatype xsd:string;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:numeroDeBrazos;
+        rr:objectMap [
+            rml:reference "numeroDeBrazos"; 
+            rr:datatype xsd:int;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:alturaBrazo1;
+        rr:objectMap [
+            rml:reference "alturaBrazo1"; 
+            rr:datatype xsd:float;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:alturaBrazo2;
+        rr:objectMap [
+            rml:reference "alturaBrazo2"; 
+            rr:datatype xsd:float;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:accesorios;
+        rr:objectMap [
+            rml:reference "accesorios"; 
+            rr:datatype xsd:string;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:tipoSoporte;
+        rr:objectMap [
+            rml:reference "tipoSoporte"; 
+            rr:datatype xsd:string;
+            rr:termType rr:IRI;
+        ]
+    ].
+
+
+    <#FarolaMap7> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "ULuminosa-csv.csv" ;
+        rml:referenceFormulation ql:CSV
+    ];
+        rr:subjectMap [
+            rr:template "http://vocab.linkeddata.es/madrid/recurso/urbanismo-infraestructuras/alumbrado-publico/farola/{identifier}/caja";
+            rr:termType rr:IRI;
+            rr:class esalumb:Caja;
+        ];
+
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:fabricante;
+        rr:objectMap [
+            rml:reference "fabricante"; 
+            rr:datatype xsd:string;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:material;
+        rr:objectMap [
+            rml:reference "material"; 
+            rr:datatype xsd:string;
+        ]
+    ];
+
+    rr:predicateObjectMap [
+       rr:predicate esalumb:tipoCable;
+        rr:objectMap [
+            rml:reference "tipoCable"; 
+            rr:datatype xsd:string;
+            rr:termType rr:IRI;
         ]
     ].
 
