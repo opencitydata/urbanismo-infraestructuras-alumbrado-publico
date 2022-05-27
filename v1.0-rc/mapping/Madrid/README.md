@@ -14,10 +14,13 @@ Es el archivo que contiene los datos del csv estructurados, a partir del vocabul
   - codigo: Representa el código que comparten un número de unidades luminosas que están en la misma calle.
   - distrito: Representa los 21 distritos de Madrid.
   - barrio: Represente los barrios que hay en Madrid.
-  - Longitude: Representa la coorddenada X.
-  - Latitude: Representa la coordenada Y.
+  - long: Representa la coorddenada X.
+  - lat: Representa la coordenada Y.
 
 # salida.nt
 Es el resultado obtenido tras procesar los datos con rmlmapper.
 - salida.nt: resultado con 300 ejemplos.
 - salidaCorta: resultado con solo 1 ejemplo.
+
+# mappingC.rml
+Es el archivo que contempla todos los atribtuos de el vocabulario.
