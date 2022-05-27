@@ -150,9 +150,16 @@
   }, {
     "@language" : "en",
     "@value" : "Relation between the PostalAddress class and the Neighborhood class"
+  }, {
+    "@language" : "en",
+    "@value" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "es",
+    "@value" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -175,15 +182,24 @@
     "@value" : "Vocabulary for the representation of the Public lighting"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
-    "@language" : "es",
-    "@value" : "Marian Martín Blázquez - Universidad Politécnica de Madrid"
+    "@language" : "en",
+    "@value" : "Corcho O"
   }, {
     "@language" : "es",
-    "@value" : "Oscar Corcho García (Ontology Engineering Group - Universidad Politécnica de Madrid)"
+    "@value" : "Corcho O"
+  }, {
+    "@language" : "en",
+    "@value" : "Martín Blázquez  M"
+  }, {
+    "@language" : "es",
+    "@value" : "Martín Blázquez  M"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Este vocabulario permite representar los datos relacionados con el alumbrado público, incluyendo datos relacionados con farolas, luminarias, lámparas, postes y cajas de alumbrado.\nHa sido desarrollado en el contexto de la iniciativa OpenCityData"
+  }, {
     "@language" : "en",
-    "@value" : "Esta versión ha sido generada durante el desarrollo del trabajo fin de grado"
+    "@value" : "This vocabulary allows representing data related to public lighting, including data related to streetlights, luminaries, lamps, poles and lighting boxes.\nIt has been developed in the context of the OpenCityData initiative."
   } ],
   "http://www.w3.org/2002/07/owl#priorVersion" : [ {
     "@language" : "en",
@@ -330,7 +346,7 @@
     "@value" : "heigh"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#alturaBrazo1",
@@ -353,7 +369,7 @@
     "@value" : "armHeigh2"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#alturaBrazo2",
@@ -376,7 +392,7 @@
     "@value" : "armHeigh2"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#anchura",
@@ -664,7 +680,7 @@
     "@value" : "numeroDeBrazos"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeLamparas",
@@ -687,7 +703,7 @@
     "@value" : "numeroDeLamparas"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeLuminarias",
@@ -710,7 +726,7 @@
     "@value" : "numeroDeLuminarias"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#poste",
@@ -736,24 +752,47 @@
     "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potencia",
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potencia1",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Amount of energy consumed by a light bulb"
-  }, {
     "@language" : "es",
-    "@value" : "Cantidad de energía que consume una bombilla"
+    "@value" : "Potencia que tiene la bombilla de lámpara.\nComo se puede dar el caso en el que haya brazos a distintas alturas y que cada altura tenga un propóstio es posible que cambie la potencia de las bombillas.\nEn caso de que solo haya una potencia solo se usará este atributo."
+  }, {
+    "@language" : "en",
+    "@value" : "The wattage of the lamp bulb.\nAs it is possible that there are arms at different heights and that each height has a pupose, it is possible that hte power of the bulbs may change."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "potencia"
+    "@value" : "potencia1"
   }, {
     "@language" : "en",
-    "@value" : "power"
+    "@value" : "power1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potencia2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Potencia que tiene la bombilla de lámpara.\nComo se puede dar el caso en el que haya brazos a distintas alturas y que cada altura tenga un propóstio es posible que cambie la potencia de las bombillas."
+  }, {
+    "@language" : "en",
+    "@value" : "The wattage of the lamp bulb.\nAs it is possible that there are arms at different heights and that each height has a pupose, it is possible that hte power of the bulbs may change."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "potencia2"
+  }, {
+    "@language" : "en",
+    "@value" : "power2"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -955,7 +994,7 @@
     "@value" : "This reused class is used for the description of a postal address"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal/index-en.html"
+    "@value" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1078,11 +1117,11 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/id",
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "id de la farola"
+    "@value" : "id de la faroal"
   }, {
     "@language" : "en",
     "@value" : "id of the streetlight"
@@ -1099,10 +1138,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "id"
+    "@value" : "identifier"
   }, {
     "@language" : "es",
-    "@value" : "id"
+    "@value" : "identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoAlimentacion",
@@ -1250,6 +1292,9 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
     "@value" : "Relacióne entre la clase DireccionPostal y la clase Distrito"
@@ -1278,10 +1323,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@language" : "en",
-    "@value" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/index-en.html"
+    "@value" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
   }, {
     "@language" : "es",
-    "@value" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/index-en.html"
+    "@value" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -1302,10 +1347,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@language" : "en",
-    "@value" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/index-en.html"
+    "@value" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
   }, {
     "@language" : "es",
-    "@value" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/index-en.html"
+    "@value" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",

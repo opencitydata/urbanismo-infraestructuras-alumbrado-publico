@@ -10,9 +10,14 @@
                                                                                              owl:versionIRI <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico> ;
                                                                                              <http://purl.org/dc/elements/1.1/title> "Vocabulario para la representación del Alumbrado Público"@es ,
                                                                                                                                      "Vocabulary for the representation of the Public lighting"@en ;
-                                                                                             <http://purl.org/dc/terms/creator> "Marian Martín Blázquez - Universidad Politécnica de Madrid"@es ,
-                                                                                                                                "Oscar Corcho García (Ontology Engineering Group - Universidad Politécnica de Madrid)"@es ;
-                                                                                             rdfs:comment "Esta versión ha sido generada durante el desarrollo del trabajo fin de grado"@en ;
+                                                                                             <http://purl.org/dc/terms/creator> "Corcho O"@en ,
+                                                                                                                                "Corcho O"@es ,
+                                                                                                                                "Martín Blázquez  M"@en ,
+                                                                                                                                "Martín Blázquez  M"@es ;
+                                                                                             rdfs:comment """Este vocabulario permite representar los datos relacionados con el alumbrado público, incluyendo datos relacionados con farolas, luminarias, lámparas, postes y cajas de alumbrado.
+Ha sido desarrollado en el contexto de la iniciativa OpenCityData"""@es ,
+                                                                                                          """This vocabulary allows representing data related to public lighting, including data related to streetlights, luminaries, lamps, poles and lighting boxes.
+It has been developed in the context of the OpenCityData initiative."""@en ;
                                                                                              owl:priorVersion "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico/index-en.html"@en ,
                                                                                                               "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico/index-en.html"@es .
 
@@ -47,7 +52,9 @@
                                                                                 rdfs:domain <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> ;
                                                                                 rdfs:range <http://vocab.linkeddata.es/def/sector-publico/territorio#Barrio> ;
                                                                                 rdfs:comment "Relación entre la clase DireccionPostal y la clase Barrio"@es ,
-                                                                                             "Relation between the PostalAddress class and the Neighborhood class"@en ;
+                                                                                             "Relation between the PostalAddress class and the Neighborhood class"@en ,
+                                                                                             "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"@en ;
+                                                                                rdfs:isDefinedBy "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"@es ;
                                                                                 rdfs:label "barrio"@es ,
                                                                                            "neighborhood"@en .
 
@@ -161,6 +168,7 @@ Every luminary has a bulb"""@en ;
 <http://vocab.linkeddata.es/def/secctor-public/territorio/distrito> rdf:type owl:ObjectProperty ;
                                                                     rdfs:domain <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> ;
                                                                     rdfs:range <http://vocab.linkeddata.es/def/sector-publico/territorio#Distrito> ;
+                                                                    rdfs:isDefinedBy "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio" ;
                                                                     rdfs:label "Relacióne entre la clase DireccionPostal y la clase Distrito"@es ,
                                                                                "Relation between the PostalAddress class from the vocabulary of opencitydata  and the DIstrict class."@en ,
                                                                                "district"@en ,
@@ -230,7 +238,7 @@ Every luminary has a bulb"""@en ;
 ###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#altura
 :altura rdf:type owl:DatatypeProperty ;
         rdfs:domain :Farola ;
-        rdfs:range xsd:string ;
+        rdfs:range xsd:float ;
         rdfs:comment "Altura de la farola desde el suelo hasta la parte más alta del poste"@es ,
                      "Heigh of the streetlight from the floor to the top of the pole"@en ;
         rdfs:label "altura"@es ,
@@ -240,7 +248,7 @@ Every luminary has a bulb"""@en ;
 ###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#alturaBrazo1
 :alturaBrazo1 rdf:type owl:DatatypeProperty ;
               rdfs:domain :Poste ;
-              rdfs:range xsd:string ;
+              rdfs:range xsd:float ;
               rdfs:comment "En caso de que haya más de un brazo a distintas alturas este representará una de las alturas"@es ,
                            "If there is more than one heigh for the arms of the pole this attributte will represent one of them"@en ;
               rdfs:label "alturaBrazo1"@es ,
@@ -250,7 +258,7 @@ Every luminary has a bulb"""@en ;
 ###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#alturaBrazo2
 :alturaBrazo2 rdf:type owl:DatatypeProperty ;
               rdfs:domain :Poste ;
-              rdfs:range xsd:string ;
+              rdfs:range xsd:float ;
               rdfs:comment "En caso de que haya más de un brazo a distintas alturas este representará una de las alturas"@es ,
                            "If there is more than one heigh for the arms of the pole this attributte will represent one of them"@en ;
               rdfs:label "alturaBrazo2"@es ,
@@ -356,7 +364,7 @@ Every luminary has a bulb"""@en ;
 ###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeBrazos
 :numeroDeBrazos rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Poste ;
-                rdfs:range xsd:string ;
+                rdfs:range xsd:int ;
                 rdfs:comment "La farola puede tener de uno a varios brazos, esto depende de su función que se le quiera dar a cada uno"@es ,
                              "The streetlight can have from one to several arms, it depends on the function you want to give to each one."@en ;
                 rdfs:label "numberOfArms"@en ,
@@ -366,7 +374,7 @@ Every luminary has a bulb"""@en ;
 ###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeLamparas
 :numeroDeLamparas rdf:type owl:DatatypeProperty ;
                   rdfs:domain :Lampara ;
-                  rdfs:range xsd:string ;
+                  rdfs:range xsd:int ;
                   rdfs:comment "El número de lámparas que tiene una farola. Además, tendrá que tener el mismo número que de luminarias."@es ,
                                "The number of lamps that a streetlight has. It should have the same number as luminaries."@en ;
                   rdfs:label "numberOfLamps"@en ,
@@ -376,21 +384,36 @@ Every luminary has a bulb"""@en ;
 ###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeLuminarias
 :numeroDeLuminarias rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Luminaria ;
-                    rdfs:range xsd:string ;
+                    rdfs:range xsd:int ;
                     rdfs:comment "El número de luminarias que tiene una farola. Además tendrá que ser el mismo número de lámparas."@es ,
                                  "The number of luminaries that has a streetlight. There should be the same number of lamps."@en ;
                     rdfs:label "numberOfLuminaries"@en ,
                                "numeroDeLuminarias"@es .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potencia
-:potencia rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Lampara ;
-          rdfs:range xsd:string ;
-          rdfs:comment "Amount of energy consumed by a light bulb"@en ,
-                       "Cantidad de energía que consume una bombilla"@es ;
-          rdfs:label "potencia"@es ,
-                     "power"@en .
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potencia1
+:potencia1 rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Lampara ;
+           rdfs:range xsd:string ;
+           rdfs:comment """Potencia que tiene la bombilla de lámpara.
+Como se puede dar el caso en el que haya brazos a distintas alturas y que cada altura tenga un propóstio es posible que cambie la potencia de las bombillas.
+En caso de que solo haya una potencia solo se usará este atributo."""@es ,
+                        """The wattage of the lamp bulb.
+As it is possible that there are arms at different heights and that each height has a pupose, it is possible that hte power of the bulbs may change."""@en ;
+           rdfs:label "potencia1"@es ,
+                      "power1"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potencia2
+:potencia2 rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Lampara ;
+           rdfs:range xsd:string ;
+           rdfs:comment """Potencia que tiene la bombilla de lámpara.
+Como se puede dar el caso en el que haya brazos a distintas alturas y que cada altura tenga un propóstio es posible que cambie la potencia de las bombillas."""@es ,
+                        """The wattage of the lamp bulb.
+As it is possible that there are arms at different heights and that each height has a pupose, it is possible that hte power of the bulbs may change."""@en ;
+           rdfs:label "potencia2"@es ,
+                      "power2"@en .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#propietario
@@ -439,15 +462,16 @@ Every luminary has a bulb"""@en ;
                                                                                                                           "rewiewDate"@en .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/id
-<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/id> rdf:type owl:DatatypeProperty ;
-                                                                                                    rdfs:domain <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> ;
-                                                                                                    rdfs:comment "id de la farola"@es ,
-                                                                                                                 "id of the streetlight"@en ;
-                                                                                                    rdfs:isDefinedBy "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal"@en ,
-                                                                                                                     "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal"@es ;
-                                                                                                    rdfs:label "id"@en ,
-                                                                                                               "id"@es .
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier> rdf:type owl:DatatypeProperty ;
+                                                                                                            rdfs:domain <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> ;
+                                                                                                            rdfs:range xsd:string ;
+                                                                                                            rdfs:comment "id de la faroal"@es ,
+                                                                                                                         "id of the streetlight"@en ;
+                                                                                                            rdfs:isDefinedBy "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal"@en ,
+                                                                                                                             "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal"@es ;
+                                                                                                            rdfs:label "identifier"@en ,
+                                                                                                                       "identifier"@es .
 
 
 ###  http://www.opengis.net/spec/geosparql#Longitude
@@ -535,7 +559,7 @@ Every luminary has a bulb"""@en ;
                                                                                                            rdfs:subClassOf <http://schema.org#PostalAddress> ;
                                                                                                            rdfs:comment "Esta clase reutilizada se usa para la descripción de una dirección postal"@es ,
                                                                                                                         "This reused class is used for the description of a postal address"@en ;
-                                                                                                           rdfs:isDefinedBy "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal/index-en.html" ;
+                                                                                                           rdfs:isDefinedBy "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal" ;
                                                                                                            rdfs:label "DireccionPostal"@en ,
                                                                                                                       "DireccionPostal"@es .
 
@@ -553,8 +577,8 @@ Every luminary has a bulb"""@en ;
 <http://vocab.linkeddata.es/def/sector-publico/territorio#Barrio> rdf:type owl:Class ;
                                                                   rdfs:comment "Identity subdivision of a town or a village"@en ,
                                                                                "Subdivisión con identidad propia de una ciudad o pueblo"@es ;
-                                                                  rdfs:isDefinedBy "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/index-en.html"@en ,
-                                                                                   "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/index-en.html"@es ;
+                                                                  rdfs:isDefinedBy "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"@en ,
+                                                                                   "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"@es ;
                                                                   rdfs:label "Barrio"@es ,
                                                                              "Neighborhood"@en .
 
@@ -563,8 +587,8 @@ Every luminary has a bulb"""@en ;
 <http://vocab.linkeddata.es/def/sector-publico/territorio#Distrito> rdf:type owl:Class ;
                                                                     rdfs:comment "Part into wich a population, territory or other place is divided for administrative or legal purposes"@en ,
                                                                                  "Parte en que se divide una población, un territorio u otro lugar con fines administrativos o jurídicos"@es ;
-                                                                    rdfs:isDefinedBy "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/index-en.html"@en ,
-                                                                                     "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/index-en.html"@es ;
+                                                                    rdfs:isDefinedBy "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"@en ,
+                                                                                     "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"@es ;
                                                                     rdfs:label "District"@en ,
                                                                                "Distrito"@es .
 

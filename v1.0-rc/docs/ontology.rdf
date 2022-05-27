@@ -12,9 +12,14 @@
         <owl:versionIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
         <dc:title xml:lang="es">Vocabulario para la representación del Alumbrado Público</dc:title>
         <dc:title xml:lang="en">Vocabulary for the representation of the Public lighting</dc:title>
-        <terms:creator xml:lang="es">Marian Martín Blázquez - Universidad Politécnica de Madrid</terms:creator>
-        <terms:creator xml:lang="es">Oscar Corcho García (Ontology Engineering Group - Universidad Politécnica de Madrid)</terms:creator>
-        <rdfs:comment xml:lang="en">Esta versión ha sido generada durante el desarrollo del trabajo fin de grado</rdfs:comment>
+        <terms:creator xml:lang="en">Corcho O</terms:creator>
+        <terms:creator xml:lang="es">Corcho O</terms:creator>
+        <terms:creator xml:lang="en">Martín Blázquez  M</terms:creator>
+        <terms:creator xml:lang="es">Martín Blázquez  M</terms:creator>
+        <rdfs:comment xml:lang="es">Este vocabulario permite representar los datos relacionados con el alumbrado público, incluyendo datos relacionados con farolas, luminarias, lámparas, postes y cajas de alumbrado.
+Ha sido desarrollado en el contexto de la iniciativa OpenCityData</rdfs:comment>
+        <rdfs:comment xml:lang="en">This vocabulary allows representing data related to public lighting, including data related to streetlights, luminaries, lamps, poles and lighting boxes.
+It has been developed in the context of the OpenCityData initiative.</rdfs:comment>
         <owl:priorVersion xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico/index-en.html</owl:priorVersion>
         <owl:priorVersion xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico/index-en.html</owl:priorVersion>
     </owl:Ontology>
@@ -81,6 +86,8 @@
         <rdfs:range rdf:resource="http://vocab.linkeddata.es/def/sector-publico/territorio#Barrio"/>
         <rdfs:comment xml:lang="es">Relación entre la clase DireccionPostal y la clase Barrio</rdfs:comment>
         <rdfs:comment xml:lang="en">Relation between the PostalAddress class and the Neighborhood class</rdfs:comment>
+        <rdfs:comment xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio</rdfs:isDefinedBy>
         <rdfs:label xml:lang="es">barrio</rdfs:label>
         <rdfs:label xml:lang="en">neighborhood</rdfs:label>
     </owl:ObjectProperty>
@@ -242,6 +249,7 @@ Every luminary has a bulb</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/def/secctor-public/territorio/distrito">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
         <rdfs:range rdf:resource="http://vocab.linkeddata.es/def/sector-publico/territorio#Distrito"/>
+        <rdfs:isDefinedBy>http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio</rdfs:isDefinedBy>
         <rdfs:label xml:lang="es">Relacióne entre la clase DireccionPostal y la clase Distrito</rdfs:label>
         <rdfs:label xml:lang="en">Relation between the PostalAddress class from the vocabulary of opencitydata  and the DIstrict class.</rdfs:label>
         <rdfs:label xml:lang="en">district</rdfs:label>
@@ -343,7 +351,7 @@ Every luminary has a bulb</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#altura">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment xml:lang="es">Altura de la farola desde el suelo hasta la parte más alta del poste</rdfs:comment>
         <rdfs:comment xml:lang="en">Heigh of the streetlight from the floor to the top of the pole</rdfs:comment>
         <rdfs:label xml:lang="es">altura</rdfs:label>
@@ -357,7 +365,7 @@ Every luminary has a bulb</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#alturaBrazo1">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment xml:lang="es">En caso de que haya más de un brazo a distintas alturas este representará una de las alturas</rdfs:comment>
         <rdfs:comment xml:lang="en">If there is more than one heigh for the arms of the pole this attributte will represent one of them</rdfs:comment>
         <rdfs:label xml:lang="es">alturaBrazo1</rdfs:label>
@@ -371,7 +379,7 @@ Every luminary has a bulb</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#alturaBrazo2">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment xml:lang="es">En caso de que haya más de un brazo a distintas alturas este representará una de las alturas</rdfs:comment>
         <rdfs:comment xml:lang="en">If there is more than one heigh for the arms of the pole this attributte will represent one of them</rdfs:comment>
         <rdfs:label xml:lang="es">alturaBrazo2</rdfs:label>
@@ -517,7 +525,7 @@ Every luminary has a bulb</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeBrazos">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment xml:lang="es">La farola puede tener de uno a varios brazos, esto depende de su función que se le quiera dar a cada uno</rdfs:comment>
         <rdfs:comment xml:lang="en">The streetlight can have from one to several arms, it depends on the function you want to give to each one.</rdfs:comment>
         <rdfs:label xml:lang="en">numberOfArms</rdfs:label>
@@ -531,7 +539,7 @@ Every luminary has a bulb</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeLamparas">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment xml:lang="es">El número de lámparas que tiene una farola. Además, tendrá que tener el mismo número que de luminarias.</rdfs:comment>
         <rdfs:comment xml:lang="en">The number of lamps that a streetlight has. It should have the same number as luminaries.</rdfs:comment>
         <rdfs:label xml:lang="en">numberOfLamps</rdfs:label>
@@ -545,7 +553,7 @@ Every luminary has a bulb</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeLuminarias">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment xml:lang="es">El número de luminarias que tiene una farola. Además tendrá que ser el mismo número de lámparas.</rdfs:comment>
         <rdfs:comment xml:lang="en">The number of luminaries that has a streetlight. There should be the same number of lamps.</rdfs:comment>
         <rdfs:label xml:lang="en">numberOfLuminaries</rdfs:label>
@@ -554,16 +562,35 @@ Every luminary has a bulb</rdfs:comment>
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potencia -->
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potencia1 -->
 
 
-    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potencia">
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potencia1">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Amount of energy consumed by a light bulb</rdfs:comment>
-        <rdfs:comment xml:lang="es">Cantidad de energía que consume una bombilla</rdfs:comment>
-        <rdfs:label xml:lang="es">potencia</rdfs:label>
-        <rdfs:label xml:lang="en">power</rdfs:label>
+        <rdfs:comment xml:lang="es">Potencia que tiene la bombilla de lámpara.
+Como se puede dar el caso en el que haya brazos a distintas alturas y que cada altura tenga un propóstio es posible que cambie la potencia de las bombillas.
+En caso de que solo haya una potencia solo se usará este atributo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The wattage of the lamp bulb.
+As it is possible that there are arms at different heights and that each height has a pupose, it is possible that hte power of the bulbs may change.</rdfs:comment>
+        <rdfs:label xml:lang="es">potencia1</rdfs:label>
+        <rdfs:label xml:lang="en">power1</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potencia2 -->
+
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potencia2">
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="es">Potencia que tiene la bombilla de lámpara.
+Como se puede dar el caso en el que haya brazos a distintas alturas y que cada altura tenga un propóstio es posible que cambie la potencia de las bombillas.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The wattage of the lamp bulb.
+As it is possible that there are arms at different heights and that each height has a pupose, it is possible that hte power of the bulbs may change.</rdfs:comment>
+        <rdfs:label xml:lang="es">potencia2</rdfs:label>
+        <rdfs:label xml:lang="en">power2</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -630,17 +657,18 @@ Every luminary has a bulb</rdfs:comment>
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/id -->
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier -->
 
 
-    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/id">
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento"/>
-        <rdfs:comment xml:lang="es">id de la farola</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="es">id de la faroal</rdfs:comment>
         <rdfs:comment xml:lang="en">id of the streetlight</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal</rdfs:isDefinedBy>
         <rdfs:isDefinedBy xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">id</rdfs:label>
-        <rdfs:label xml:lang="es">id</rdfs:label>
+        <rdfs:label xml:lang="en">identifier</rdfs:label>
+        <rdfs:label xml:lang="es">identifier</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -772,7 +800,7 @@ Every luminary has a bulb</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://schema.org#PostalAddress"/>
         <rdfs:comment xml:lang="es">Esta clase reutilizada se usa para la descripción de una dirección postal</rdfs:comment>
         <rdfs:comment xml:lang="en">This reused class is used for the description of a postal address</rdfs:comment>
-        <rdfs:isDefinedBy>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal/index-en.html</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">DireccionPostal</rdfs:label>
         <rdfs:label xml:lang="es">DireccionPostal</rdfs:label>
     </owl:Class>
@@ -798,8 +826,8 @@ Every luminary has a bulb</rdfs:comment>
     <owl:Class rdf:about="http://vocab.linkeddata.es/def/sector-publico/territorio#Barrio">
         <rdfs:comment xml:lang="en">Identity subdivision of a town or a village</rdfs:comment>
         <rdfs:comment xml:lang="es">Subdivisión con identidad propia de una ciudad o pueblo</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/index-en.html</rdfs:isDefinedBy>
-        <rdfs:isDefinedBy xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/index-en.html</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio</rdfs:isDefinedBy>
         <rdfs:label xml:lang="es">Barrio</rdfs:label>
         <rdfs:label xml:lang="en">Neighborhood</rdfs:label>
     </owl:Class>
@@ -812,8 +840,8 @@ Every luminary has a bulb</rdfs:comment>
     <owl:Class rdf:about="http://vocab.linkeddata.es/def/sector-publico/territorio#Distrito">
         <rdfs:comment xml:lang="en">Part into wich a population, territory or other place is divided for administrative or legal purposes</rdfs:comment>
         <rdfs:comment xml:lang="es">Parte en que se divide una población, un territorio u otro lugar con fines administrativos o jurídicos</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/index-en.html</rdfs:isDefinedBy>
-        <rdfs:isDefinedBy xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/index-en.html</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">District</rdfs:label>
         <rdfs:label xml:lang="es">Distrito</rdfs:label>
     </owl:Class>
