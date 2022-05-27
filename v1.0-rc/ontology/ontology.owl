@@ -26,15 +26,29 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
-        <Literal xml:lang="es">Marian Martín Blázquez - Universidad Politécnica de Madrid</Literal>
+        <Literal xml:lang="en">Corcho O</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
-        <Literal xml:lang="es">Oscar Corcho García (Ontology Engineering Group - Universidad Politécnica de Madrid)</Literal>
+        <Literal xml:lang="es">Corcho O</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal xml:lang="en">Martín Blázquez  M</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal xml:lang="es">Martín Blázquez  M</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal xml:lang="en">Esta versión ha sido generada durante el desarrollo del trabajo fin de grado</Literal>
+        <Literal xml:lang="es">Este vocabulario permite representar los datos relacionados con el alumbrado público, incluyendo datos relacionados con farolas, luminarias, lámparas, postes y cajas de alumbrado.
+Ha sido desarrollado en el contexto de la iniciativa OpenCityData</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">This vocabulary allows representing data related to public lighting, including data related to streetlights, luminaries, lamps, poles and lighting boxes.
+It has been developed in the context of the OpenCityData initiative.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
@@ -192,7 +206,10 @@
         <DataProperty IRI="#numeroDeLuminarias"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#potencia"/>
+        <DataProperty IRI="#potencia1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#potencia2"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#propietario"/>
@@ -207,7 +224,7 @@
         <DataProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaRevision"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/id"/>
+        <DataProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="http://www.opengis.net/spec/geosparql#Longitude"/>
@@ -495,7 +512,11 @@
         <Class IRI="#Luminaria"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#potencia"/>
+        <DataProperty IRI="#potencia1"/>
+        <Class IRI="#Lampara"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#potencia2"/>
         <Class IRI="#Lampara"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -515,7 +536,7 @@
         <Class abbreviatedIRI="esequip:Equipamiento"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/id"/>
+        <DataProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier"/>
         <Class abbreviatedIRI="esequip:Equipamiento"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -544,15 +565,15 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#altura"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#alturaBrazo1"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#alturaBrazo2"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#anchura"/>
@@ -592,18 +613,22 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#numeroDeBrazos"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#numeroDeLamparas"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#numeroDeLuminarias"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#potencia1"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#potencia"/>
+        <DataProperty IRI="#potencia2"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -621,6 +646,10 @@
     <DataPropertyRange>
         <DataProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaRevision"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="http://www.opengis.net/spec/geosparql#Longitude"/>
@@ -779,6 +808,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/barrio</IRI>
         <Literal xml:lang="en">Relation between the PostalAddress class and the Neighborhood class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/barrio</IRI>
+        <Literal xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/barrio</IRI>
+        <Literal xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1272,23 +1311,48 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#potencia</IRI>
-        <Literal xml:lang="en">Amount of energy consumed by a light bulb</Literal>
+        <IRI>#potencia1</IRI>
+        <Literal xml:lang="es">Potencia que tiene la bombilla de lámpara.
+Como se puede dar el caso en el que haya brazos a distintas alturas y que cada altura tenga un propóstio es posible que cambie la potencia de las bombillas.
+En caso de que solo haya una potencia solo se usará este atributo.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#potencia</IRI>
-        <Literal xml:lang="es">Cantidad de energía que consume una bombilla</Literal>
+        <IRI>#potencia1</IRI>
+        <Literal xml:lang="en">The wattage of the lamp bulb.
+As it is possible that there are arms at different heights and that each height has a pupose, it is possible that hte power of the bulbs may change.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#potencia</IRI>
-        <Literal xml:lang="es">potencia</Literal>
+        <IRI>#potencia1</IRI>
+        <Literal xml:lang="es">potencia1</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#potencia</IRI>
-        <Literal xml:lang="en">power</Literal>
+        <IRI>#potencia1</IRI>
+        <Literal xml:lang="en">power1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#potencia2</IRI>
+        <Literal xml:lang="es">Potencia que tiene la bombilla de lámpara.
+Como se puede dar el caso en el que haya brazos a distintas alturas y que cada altura tenga un propóstio es posible que cambie la potencia de las bombillas.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#potencia2</IRI>
+        <Literal xml:lang="en">The wattage of the lamp bulb.
+As it is possible that there are arms at different heights and that each height has a pupose, it is possible that hte power of the bulbs may change.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#potencia2</IRI>
+        <Literal xml:lang="es">potencia2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#potencia2</IRI>
+        <Literal xml:lang="en">power2</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1485,7 +1549,7 @@ Every luminary has a bulb</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal</IRI>
-        <Literal>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal/index-en.html</Literal>
+        <Literal>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1609,33 +1673,33 @@ Every luminary has a bulb</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/id</IRI>
-        <Literal xml:lang="es">id de la farola</Literal>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier</IRI>
+        <Literal xml:lang="es">id de la faroal</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/id</IRI>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier</IRI>
         <Literal xml:lang="en">id of the streetlight</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/id</IRI>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier</IRI>
         <Literal xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/id</IRI>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier</IRI>
         <Literal xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/id</IRI>
-        <Literal xml:lang="en">id</Literal>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier</IRI>
+        <Literal xml:lang="en">identifier</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/id</IRI>
-        <Literal xml:lang="es">id</Literal>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier</IRI>
+        <Literal xml:lang="es">identifier</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1778,6 +1842,11 @@ Every luminary has a bulb</Literal>
         <Literal xml:lang="es">tipoSoporte</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/def/secctor-public/territorio/distrito</IRI>
+        <Literal>http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://vocab.linkeddata.es/def/secctor-public/territorio/distrito</IRI>
         <Literal xml:lang="es">Relacióne entre la clase DireccionPostal y la clase Distrito</Literal>
@@ -1810,12 +1879,12 @@ Every luminary has a bulb</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://vocab.linkeddata.es/def/sector-publico/territorio#Barrio</IRI>
-        <Literal xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/index-en.html</Literal>
+        <Literal xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://vocab.linkeddata.es/def/sector-publico/territorio#Barrio</IRI>
-        <Literal xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/index-en.html</Literal>
+        <Literal xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1840,12 +1909,12 @@ Every luminary has a bulb</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://vocab.linkeddata.es/def/sector-publico/territorio#Distrito</IRI>
-        <Literal xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/index-en.html</Literal>
+        <Literal xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>http://vocab.linkeddata.es/def/sector-publico/territorio#Distrito</IRI>
-        <Literal xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/index-en.html</Literal>
+        <Literal xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
