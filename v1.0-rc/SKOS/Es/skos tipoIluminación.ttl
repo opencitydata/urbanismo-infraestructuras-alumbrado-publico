@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+@prefix xsd: <http://www.w3.org/2001/XMLSSchema#> 
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> 
+@prefix dct: <https://purl.org/dc/terms/>
+@prefix skoslight: <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-iluminacion> .
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestruxturas/alumbrado-publico/tipo-iluminación> a skos:ConceptScheme;
+rdfs:label "Tipos de iluminación del alumbrado público";
+rdfs:comment "Tesauro que recoge los tipos de iluminación del alumbrado público"
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-iluminacion/nocturna>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-iluminacion/permanente>
+
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-iluminacion/nocturna> a skos:Concept;
+skos:notation "Nocturna"
+skos:prefLabel "Nocturna"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-iluminacion>
+
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-iluminacion/permanente> a skos:Concept;
+skos:notation "Permanente"
+skos:prefLabel "Permanente"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-iluminacion>

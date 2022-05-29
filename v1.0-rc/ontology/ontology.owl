@@ -1,0 +1,2139 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"
+     versionIRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico">
+    <Prefix name="" IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="esalumb" IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#"/>
+    <Prefix name="esequip" IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#"/>
+    <Prefix name="geosparql" IRI="http://www.opengis.net/spec/geosparql/"/>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal xml:lang="es">Vocabulario para la representación del Alumbrado Público</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal xml:lang="en">Vocabulary for the representation of the Public lighting</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal xml:lang="en">Corcho O</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal xml:lang="es">Corcho O</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal xml:lang="en">Martín Blázquez  M</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal xml:lang="es">Martín Blázquez  M</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="es">Este vocabulario permite representar los datos relacionados con el alumbrado público, incluyendo datos relacionados con farolas, luminarias, lámparas, postes y cajas de alumbrado.
+Ha sido desarrollado en el contexto de la iniciativa OpenCityData</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">This vocabulary allows representing data related to public lighting, including data related to streetlights, luminaries, lamps, poles and lighting boxes.
+It has been developed in the context of the OpenCityData initiative.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <Literal xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico/index-en.html</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <Literal xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico/index-en.html</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://schema.org#PostalAddress"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Caja"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Farola"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lampara"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Luminaria"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Poste"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="esequip:Equipamiento"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.linkeddata.es/def/sector-publico/territorio#Barrio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.linkeddata.es/def/sector-publico/territorio#Distrito"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="geosparql:Feature"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="geosparql:Geometry"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="geosparql:Point"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="geosparql:SpatialObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/address"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/barrio"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#caja"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#luminaria"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#poste"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tieneLampara"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tipoAlimentacion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tipoAlumbrado"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tipoCable"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tipoIluminacion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tipoLampara"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tipoLuminaria"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tipoSoporte"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://vocab.linkeddata.es/def/secctor-public/territorio/distrito"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="geosparql:hasGeometry"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://schema.org/addressCountry"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://schema.org/addressLocality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://schema.org/streetAddress"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#accesorios"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#altura"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#alturaBrazo1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#alturaBrazo2"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#anchura"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#consumo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#fabricante"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#gabineteDeControl"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#horasDeFuncionamiento"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#intensidadLuminica"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#material"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#metodoDeControl"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#modeloBombilla"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numeroDeBrazos"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numeroDeLamparas"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numeroDeLuminarias"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#potencia1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#potencia2"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#propietario"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaAlta"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaBaja"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaRevision"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.opengis.net/spec/geosparql#Longitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="geosparql:Latitude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoAlimentacion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoAlumbrado"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoCable"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoIluminacion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoLampara"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoLuminaria"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoSoporte"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Farola"/>
+        <Class abbreviatedIRI="esequip:Equipamiento"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lampara"/>
+        <Class IRI="#Luminaria"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
+        <Class IRI="http://schema.org#PostalAddress"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="esequip:Equipamiento"/>
+        <Class abbreviatedIRI="geosparql:Feature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="geosparql:Feature"/>
+        <Class abbreviatedIRI="geosparql:SpatialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="geosparql:Geometry"/>
+        <Class abbreviatedIRI="geosparql:SpatialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="geosparql:Point"/>
+        <Class abbreviatedIRI="geosparql:Geometry"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class abbreviatedIRI="geosparql:Feature"/>
+        <Class abbreviatedIRI="geosparql:Geometry"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoAlimentacion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoAlumbrado"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoCable"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoIluminacion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoLampara"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoLuminaria"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <NamedIndividual IRI="http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoSoporte"/>
+    </ClassAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://schema.org/address"/>
+        <Class IRI="#Farola"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/barrio"/>
+        <Class IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#caja"/>
+        <Class IRI="#Farola"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#luminaria"/>
+        <Class IRI="#Farola"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#poste"/>
+        <Class IRI="#Farola"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tieneLampara"/>
+        <Class IRI="#Luminaria"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tipoAlimentacion"/>
+        <Class IRI="#Farola"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tipoAlumbrado"/>
+        <Class IRI="#Farola"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tipoCable"/>
+        <Class IRI="#Caja"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tipoIluminacion"/>
+        <Class IRI="#Farola"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tipoLampara"/>
+        <Class IRI="#Lampara"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tipoLuminaria"/>
+        <Class IRI="#Luminaria"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tipoSoporte"/>
+        <Class IRI="#Poste"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://vocab.linkeddata.es/def/secctor-public/territorio/distrito"/>
+        <Class IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="geosparql:hasGeometry"/>
+        <Class abbreviatedIRI="geosparql:Feature"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://schema.org/address"/>
+        <Class IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/barrio"/>
+        <Class IRI="http://vocab.linkeddata.es/def/sector-publico/territorio#Barrio"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#caja"/>
+        <Class IRI="#Caja"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#luminaria"/>
+        <Class IRI="#Luminaria"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#poste"/>
+        <Class IRI="#Poste"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tieneLampara"/>
+        <Class IRI="#Lampara"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://vocab.linkeddata.es/def/secctor-public/territorio/distrito"/>
+        <Class IRI="http://vocab.linkeddata.es/def/sector-publico/territorio#Distrito"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="geosparql:hasGeometry"/>
+        <Class abbreviatedIRI="geosparql:Geometry"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://schema.org/addressCountry"/>
+        <Class IRI="http://schema.org#PostalAddress"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://schema.org/addressLocality"/>
+        <Class IRI="http://schema.org#PostalAddress"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://schema.org/streetAddress"/>
+        <Class IRI="http://schema.org#PostalAddress"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#accesorios"/>
+        <Class IRI="#Poste"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#altura"/>
+        <Class IRI="#Farola"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#alturaBrazo1"/>
+        <Class IRI="#Poste"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#alturaBrazo2"/>
+        <Class IRI="#Poste"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#anchura"/>
+        <Class IRI="#Farola"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#consumo"/>
+        <Class IRI="#Lampara"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#fabricante"/>
+        <Class IRI="#Caja"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#fabricante"/>
+        <Class IRI="#Lampara"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#fabricante"/>
+        <Class IRI="#Luminaria"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#fabricante"/>
+        <Class IRI="#Poste"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#gabineteDeControl"/>
+        <Class IRI="#Farola"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#horasDeFuncionamiento"/>
+        <Class IRI="#Farola"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#intensidadLuminica"/>
+        <Class IRI="#Lampara"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#material"/>
+        <Class IRI="#Caja"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#material"/>
+        <Class IRI="#Lampara"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#material"/>
+        <Class IRI="#Luminaria"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#material"/>
+        <Class IRI="#Poste"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#metodoDeControl"/>
+        <Class IRI="#Farola"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#modeloBombilla"/>
+        <Class IRI="#Farola"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#numeroDeBrazos"/>
+        <Class IRI="#Poste"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#numeroDeLamparas"/>
+        <Class IRI="#Lampara"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#numeroDeLuminarias"/>
+        <Class IRI="#Luminaria"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#potencia1"/>
+        <Class IRI="#Lampara"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#potencia2"/>
+        <Class IRI="#Lampara"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#propietario"/>
+        <Class IRI="#Farola"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaAlta"/>
+        <Class abbreviatedIRI="esequip:Equipamiento"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaBaja"/>
+        <Class abbreviatedIRI="esequip:Equipamiento"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaRevision"/>
+        <Class abbreviatedIRI="esequip:Equipamiento"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier"/>
+        <Class abbreviatedIRI="esequip:Equipamiento"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.opengis.net/spec/geosparql#Longitude"/>
+        <Class abbreviatedIRI="geosparql:Point"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="geosparql:Latitude"/>
+        <Class abbreviatedIRI="geosparql:Point"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="http://schema.org/addressCountry"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://schema.org/addressLocality"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://schema.org/streetAddress"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#accesorios"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#altura"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#alturaBrazo1"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#alturaBrazo2"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#anchura"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#consumo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#fabricante"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#gabineteDeControl"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#horasDeFuncionamiento"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#intensidadLuminica"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#material"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#metodoDeControl"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#modeloBombilla"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#numeroDeBrazos"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#numeroDeLamparas"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#numeroDeLuminarias"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#potencia1"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#potencia2"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#propietario"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaAlta"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaBaja"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaRevision"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.opengis.net/spec/geosparql#Longitude"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="geosparql:Latitude"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://schema.org#PostalAddress</IRI>
+        <Literal xml:lang="es">Esta clase se utiliza para la descripción de la dirección postal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://schema.org#PostalAddress</IRI>
+        <Literal xml:lang="en">This class is used to describe the postal address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://schema.org#PostalAddress</IRI>
+        <Literal xml:lang="en">https://schema.org/PostalAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://schema.org#PostalAddress</IRI>
+        <Literal xml:lang="es">https://schema.org/PostalAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://schema.org#PostalAddress</IRI>
+        <Literal xml:lang="en">PostalAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://schema.org#PostalAddress</IRI>
+        <Literal xml:lang="es">PostalAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://schema.org/address</IRI>
+        <Literal xml:lang="es">Relación entre la clase Farola y la clase DireccionPostal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://schema.org/address</IRI>
+        <Literal xml:lang="en">Relation between the Streetlight class and the DireccionPostal class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://schema.org/address</IRI>
+        <Literal xml:lang="en">https://schema.org/PostalAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://schema.org/address</IRI>
+        <Literal xml:lang="es">https://schema.org/PostalAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://schema.org/addressCountry</IRI>
+        <Literal xml:lang="es">País en el que la farola está ubicada</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://schema.org/addressCountry</IRI>
+        <Literal xml:lang="en">The country in which the streetlight is located</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://schema.org/addressCountry</IRI>
+        <Literal xml:lang="en">https://schema.org</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://schema.org/addressCountry</IRI>
+        <Literal xml:lang="es">https://schema.org</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://schema.org/addressCountry</IRI>
+        <Literal xml:lang="en">addressCountry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://schema.org/addressCountry</IRI>
+        <Literal xml:lang="es">addressCountry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://schema.org/addressLocality</IRI>
+        <Literal xml:lang="es">Localidad en la que está la calle a la que pertenece la farola</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://schema.org/addressLocality</IRI>
+        <Literal xml:lang="en">The locality in which the street to which the lamppost belongs is situated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://schema.org/addressLocality</IRI>
+        <Literal xml:lang="en">https://schema.org</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://schema.org/addressLocality</IRI>
+        <Literal xml:lang="es">https://schema.org</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://schema.org/addressLocality</IRI>
+        <Literal xml:lang="en">addressLocality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://schema.org/addressLocality</IRI>
+        <Literal xml:lang="es">addressLocality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://schema.org/streetAddress</IRI>
+        <Literal xml:lang="en">Name of the street where the streetlight is located  also including the number and the venue type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://schema.org/streetAddress</IRI>
+        <Literal xml:lang="es">Nombre de la calle en la que está la farola en la que también se incluye el número y el tipo de vía</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://schema.org/streetAddress</IRI>
+        <Literal xml:lang="en">https://schema.org</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://schema.org/streetAddress</IRI>
+        <Literal xml:lang="es">https://schema.org</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://schema.org/streetAddress</IRI>
+        <Literal xml:lang="en">streetAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://schema.org/streetAddress</IRI>
+        <Literal xml:lang="es">streetAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/barrio</IRI>
+        <Literal xml:lang="es">Relación entre la clase DireccionPostal y la clase Barrio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/barrio</IRI>
+        <Literal xml:lang="en">Relation between the PostalAddress class and the Neighborhood class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/barrio</IRI>
+        <Literal xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/barrio</IRI>
+        <Literal xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/barrio</IRI>
+        <Literal xml:lang="es">barrio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/barrio</IRI>
+        <Literal xml:lang="en">neighborhood</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Caja</IRI>
+        <Literal xml:lang="es">Lugar desde el que se pueden acceder a los cables de la farola</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Caja</IRI>
+        <Literal xml:lang="en">Place where the cables of the streetlight are accesible</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Caja</IRI>
+        <Literal xml:lang="en">Box</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Caja</IRI>
+        <Literal xml:lang="es">Caja</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Farola</IRI>
+        <Literal xml:lang="en">Big lantern that is situated above a pole that brings light to the street or highways</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Farola</IRI>
+        <Literal xml:lang="es">Farol grande colocado en alto sobre un poste que sirve para alumbrar las calles y tramos de carreteras</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Farola</IRI>
+        <Literal xml:lang="es">Farola</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Farola</IRI>
+        <Literal xml:lang="en">Lampost</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Lampara</IRI>
+        <Literal xml:lang="es">Es la bombilla de la farola y es un convertidor de energía que transforma la energía eléctrica en luz</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Lampara</IRI>
+        <Literal xml:lang="en">It is the bulb in the streetlight and is an energy converter that transforms electrical energy into light.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Lampara</IRI>
+        <Literal xml:lang="en">Lamp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Lampara</IRI>
+        <Literal xml:lang="es">Lampara</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Luminaria</IRI>
+        <Literal xml:lang="es">Aparato de alumbrado que reparte, filtra o transforma la luz emitida por las lámparas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Luminaria</IRI>
+        <Literal xml:lang="en">Lighting fixture that distributes, filters or transforms the light emitted by the lamps</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Luminaria</IRI>
+        <Literal xml:lang="es">Luminaria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Luminaria</IRI>
+        <Literal xml:lang="en">Luminary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Poste</IRI>
+        <Literal xml:lang="es">Clase que representa la columna que se coloca de forma vertical que sirve de apoyo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Poste</IRI>
+        <Literal xml:lang="en">Class that represents the column that is placed verticaly so it helps as a support</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Poste</IRI>
+        <Literal xml:lang="en">Pole</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Poste</IRI>
+        <Literal xml:lang="es">Poste</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#accesorios</IRI>
+        <Literal xml:lang="es">Los accesorios que puede tener una farola como por ejemplo un medidor de contaminación acústica, cámaras de seguridad, medidores de CO2, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#accesorios</IRI>
+        <Literal xml:lang="en">The accesories that a streetlight can have are some like an acoustic measurer, C02 measurer, CTV, and so on.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#accesorios</IRI>
+        <Literal xml:lang="en">accesories</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#accesorios</IRI>
+        <Literal xml:lang="es">accesorios</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#altura</IRI>
+        <Literal xml:lang="es">Altura de la farola desde el suelo hasta la parte más alta del poste</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#altura</IRI>
+        <Literal xml:lang="en">Heigh of the streetlight from the floor to the top of the pole</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#altura</IRI>
+        <Literal xml:lang="es">altura</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#altura</IRI>
+        <Literal xml:lang="en">heigh</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#alturaBrazo1</IRI>
+        <Literal xml:lang="es">En caso de que haya más de un brazo a distintas alturas este representará una de las alturas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#alturaBrazo1</IRI>
+        <Literal xml:lang="en">If there is more than one heigh for the arms of the pole this attributte will represent one of them</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#alturaBrazo1</IRI>
+        <Literal xml:lang="es">alturaBrazo1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#alturaBrazo1</IRI>
+        <Literal xml:lang="en">armHeigh2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#alturaBrazo2</IRI>
+        <Literal xml:lang="es">En caso de que haya más de un brazo a distintas alturas este representará una de las alturas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#alturaBrazo2</IRI>
+        <Literal xml:lang="en">If there is more than one heigh for the arms of the pole this attributte will represent one of them</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#alturaBrazo2</IRI>
+        <Literal xml:lang="es">alturaBrazo2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#alturaBrazo2</IRI>
+        <Literal xml:lang="en">armHeigh2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#anchura</IRI>
+        <Literal xml:lang="en">Distance occupied by a streetlight from one of its luminaires to its opposite one</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#anchura</IRI>
+        <Literal xml:lang="es">Distancia que ocupa una farola desde una de sus luminarias hasta su opuesta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#anchura</IRI>
+        <Literal xml:lang="es">anchura</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#anchura</IRI>
+        <Literal xml:lang="en">width</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#caja</IRI>
+        <Literal xml:lang="es">Relación entre la clase farola y la clase caja que forma parte de ella. Cada farola puede tener una caja</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#caja</IRI>
+        <Literal xml:lang="en">Relation between the streetlight class and the box class that is part of it. Each streetlight can have a box</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#caja</IRI>
+        <Literal xml:lang="en">box</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#caja</IRI>
+        <Literal xml:lang="es">caja</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#consumo</IRI>
+        <Literal xml:lang="es">Consumo de la bombilla de la lámpara</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#consumo</IRI>
+        <Literal xml:lang="en">lamp bulb consumption</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#consumo</IRI>
+        <Literal xml:lang="en">consume</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#consumo</IRI>
+        <Literal xml:lang="es">consumo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#fabricante</IRI>
+        <Literal xml:lang="en">Company that manufactures the materials which the streetlight is made of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#fabricante</IRI>
+        <Literal xml:lang="es">Compañía que fabrica los materiales de los que está formada la farola</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#fabricante</IRI>
+        <Literal xml:lang="es">fabricante</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#fabricante</IRI>
+        <Literal xml:lang="en">manufacturer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#gabineteDeControl</IRI>
+        <Literal xml:lang="es">Control cabinet that is shared between a group of streetlights</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#gabineteDeControl</IRI>
+        <Literal xml:lang="es">Gabinete de control que comparte un grupo de faroals</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#gabineteDeControl</IRI>
+        <Literal xml:lang="en">controlCabinet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#gabineteDeControl</IRI>
+        <Literal xml:lang="es">gabineteDeControl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#horasDeFuncionamiento</IRI>
+        <Literal xml:lang="en">Number of ours  that the streetlight spends activated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#horasDeFuncionamiento</IRI>
+        <Literal xml:lang="es">Número de horas en las que el alumbrado se encuentra encendido</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#horasDeFuncionamiento</IRI>
+        <Literal xml:lang="es">horasDeFuncionamiento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#horasDeFuncionamiento</IRI>
+        <Literal xml:lang="en">workingHours</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#intensidadLuminica</IRI>
+        <Literal xml:lang="es">La intensidad lumínica es la cantidad de flujo luminoso que emite una fuente por unidad de ángulo sólido</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#intensidadLuminica</IRI>
+        <Literal xml:lang="en">Luminous intensity is the amount of luminous flux emitted by a source per unit solid angle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#intensidadLuminica</IRI>
+        <Literal xml:lang="es">intensidadLuminica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#intensidadLuminica</IRI>
+        <Literal xml:lang="en">lightOutput</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#luminaria</IRI>
+        <Literal xml:lang="es">Relación entre la clase farola y la clase luminaria que forma parte de ella. Cada farola puede tener una o varias luminarias</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#luminaria</IRI>
+        <Literal xml:lang="en">Relation between the streetlight class and the luminaire class that is part of it. Each streetlight may have one or more luminaires.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#luminaria</IRI>
+        <Literal xml:lang="es">luminaria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#luminaria</IRI>
+        <Literal xml:lang="en">luminary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#material</IRI>
+        <Literal xml:lang="es">Material del que están hechas las partes de la farola</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#material</IRI>
+        <Literal xml:lang="en">Material of which the streetlight parts are made</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#material</IRI>
+        <Literal xml:lang="en">material</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#material</IRI>
+        <Literal xml:lang="es">material</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#metodoDeControl</IRI>
+        <Literal xml:lang="en">Method of controlling the streetlight by which they are activated or deactivated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#metodoDeControl</IRI>
+        <Literal xml:lang="es">Método de control de la farola con el que se activan o desactivan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#metodoDeControl</IRI>
+        <Literal xml:lang="en">controlMethod</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#metodoDeControl</IRI>
+        <Literal xml:lang="es">metodoDeControl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#modeloBombilla</IRI>
+        <Literal xml:lang="es">El modelo de bombilla de la lámpara</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#modeloBombilla</IRI>
+        <Literal xml:lang="en">The bulb model of the lamp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#modeloBombilla</IRI>
+        <Literal xml:lang="en">bulbModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#modeloBombilla</IRI>
+        <Literal xml:lang="es">modeloBombilla</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#numeroDeBrazos</IRI>
+        <Literal xml:lang="es">La farola puede tener de uno a varios brazos, esto depende de su función que se le quiera dar a cada uno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#numeroDeBrazos</IRI>
+        <Literal xml:lang="en">The streetlight can have from one to several arms, it depends on the function you want to give to each one.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#numeroDeBrazos</IRI>
+        <Literal xml:lang="en">numberOfArms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#numeroDeBrazos</IRI>
+        <Literal xml:lang="es">numeroDeBrazos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#numeroDeLamparas</IRI>
+        <Literal xml:lang="es">El número de lámparas que tiene una farola. Además, tendrá que tener el mismo número que de luminarias.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#numeroDeLamparas</IRI>
+        <Literal xml:lang="en">The number of lamps that a streetlight has. It should have the same number as luminaries.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#numeroDeLamparas</IRI>
+        <Literal xml:lang="en">numberOfLamps</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#numeroDeLamparas</IRI>
+        <Literal xml:lang="es">numeroDeLamparas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#numeroDeLuminarias</IRI>
+        <Literal xml:lang="es">El número de luminarias que tiene una farola. Además tendrá que ser el mismo número de lámparas.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#numeroDeLuminarias</IRI>
+        <Literal xml:lang="en">The number of luminaries that has a streetlight. There should be the same number of lamps.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#numeroDeLuminarias</IRI>
+        <Literal xml:lang="en">numberOfLuminaries</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#numeroDeLuminarias</IRI>
+        <Literal xml:lang="es">numeroDeLuminarias</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#poste</IRI>
+        <Literal xml:lang="es">Relación entre la clase farola y la clase poste que forma parte de ella. Cada farola puede tener un poste</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#poste</IRI>
+        <Literal xml:lang="en">Relation between the streetlight class and the pole class that is part of it. Each streetlight can have a pole</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#poste</IRI>
+        <Literal xml:lang="en">pole</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#poste</IRI>
+        <Literal xml:lang="es">poste</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#potencia1</IRI>
+        <Literal xml:lang="es">Potencia que tiene la bombilla de lámpara.
+Como se puede dar el caso en el que haya brazos a distintas alturas y que cada altura tenga un propóstio es posible que cambie la potencia de las bombillas.
+En caso de que solo haya una potencia solo se usará este atributo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#potencia1</IRI>
+        <Literal xml:lang="en">The wattage of the lamp bulb.
+As it is possible that there are arms at different heights and that each height has a pupose, it is possible that hte power of the bulbs may change.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#potencia1</IRI>
+        <Literal xml:lang="es">potencia1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#potencia1</IRI>
+        <Literal xml:lang="en">power1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#potencia2</IRI>
+        <Literal xml:lang="es">Potencia que tiene la bombilla de lámpara.
+Como se puede dar el caso en el que haya brazos a distintas alturas y que cada altura tenga un propóstio es posible que cambie la potencia de las bombillas.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#potencia2</IRI>
+        <Literal xml:lang="en">The wattage of the lamp bulb.
+As it is possible that there are arms at different heights and that each height has a pupose, it is possible that hte power of the bulbs may change.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#potencia2</IRI>
+        <Literal xml:lang="es">potencia2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#potencia2</IRI>
+        <Literal xml:lang="en">power2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#propietario</IRI>
+        <Literal xml:lang="es">Entidad a la que pertenece la farola</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#propietario</IRI>
+        <Literal xml:lang="en">Entity that has ownership over the streetlight</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#propietario</IRI>
+        <Literal xml:lang="en">owner</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#propietario</IRI>
+        <Literal xml:lang="es">propietario</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tieneLampara</IRI>
+        <Literal xml:lang="es">Relación entre la clase Luminaria y la clase Lámpara.
+Cada luminaria tiene una lámpara</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tieneLampara</IRI>
+        <Literal xml:lang="en">Relation between the Luminary class and the Lamp class.
+Every luminary has a bulb</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tieneLampara</IRI>
+        <Literal xml:lang="en">hasLamp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tieneLampara</IRI>
+        <Literal xml:lang="es">tieneLampara</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tipoAlimentacion</IRI>
+        <Literal xml:lang="es">Relación entre la clase Farola y la lista skos sobre el tipo de alimentación que puede tener una farola</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tipoAlimentacion</IRI>
+        <Literal xml:lang="en">Relation between the Streetlight class and the skos list about the power type that a streetlight can have</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tipoAlimentacion</IRI>
+        <Literal xml:lang="en">powerType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tipoAlimentacion</IRI>
+        <Literal xml:lang="es">tipoAlimentacion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tipoAlumbrado</IRI>
+        <Literal xml:lang="es">Relación entre la clase Farola y la lista skos sobre el tipo de Alumbrado que puede tener una farola</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tipoAlumbrado</IRI>
+        <Literal xml:lang="en">Relation between the Streetlight class and the skos list about the types of lighting that a streetlight can have</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tipoAlumbrado</IRI>
+        <Literal xml:lang="en">lightingType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tipoAlumbrado</IRI>
+        <Literal xml:lang="es">tipoAlumbrado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tipoCable</IRI>
+        <Literal xml:lang="es">Relación entre la clase Caja y la lista skos sobre los tipos de cables que puede tener una farola</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tipoCable</IRI>
+        <Literal xml:lang="en">Relation between the Box class ant the skos list about the type of cable that a streetlight can have</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tipoCable</IRI>
+        <Literal xml:lang="en">cableType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tipoCable</IRI>
+        <Literal xml:lang="es">tipoCable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tipoIluminacion</IRI>
+        <Literal xml:lang="es">Relación entre la clase Farola y la lista skos sobre el tipo de Iluminación que puede tener una farola</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tipoIluminacion</IRI>
+        <Literal xml:lang="en">Relation between the Streetlight class and the skos list about the types of iluminations that a streetlight can have</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tipoIluminacion</IRI>
+        <Literal xml:lang="en">IluminationType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tipoIluminacion</IRI>
+        <Literal xml:lang="es">tipoIluminacion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tipoLampara</IRI>
+        <Literal xml:lang="es">Relación entre la clase Lámpara y la lista skos sobre el tipo de lámpara que puede tener una farola</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tipoLampara</IRI>
+        <Literal xml:lang="en">Relation between the Lamp class and the skos list about the types of lamps that can have a streetlight</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tipoLampara</IRI>
+        <Literal xml:lang="en">lampType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tipoLampara</IRI>
+        <Literal xml:lang="es">tipoLampara</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tipoLuminaria</IRI>
+        <Literal xml:lang="es">Relación entre la clase Luminaria y la lista skos sobre el tipo de luminaria que puede tener una farola</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tipoLuminaria</IRI>
+        <Literal xml:lang="en">Relation between the Luminary class and the skos list about the types of luminaries that a streetlight can have</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tipoLuminaria</IRI>
+        <Literal xml:lang="en">luminaryType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tipoLuminaria</IRI>
+        <Literal xml:lang="es">tipoLuminaria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tipoSoporte</IRI>
+        <Literal xml:lang="es">Relación entre la clase Poste y la lista skos sobre los tipos de postes que puede tener una farola</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tipoSoporte</IRI>
+        <Literal xml:lang="en">Relation between the Pole class and the skos list about the types of holders that a streetlight can have</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tipoSoporte</IRI>
+        <Literal xml:lang="en">holderType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tipoSoporte</IRI>
+        <Literal xml:lang="es">tipoSoporte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal</IRI>
+        <Literal xml:lang="es">Esta clase reutilizada se usa para la descripción de una dirección postal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal</IRI>
+        <Literal xml:lang="en">This reused class is used for the description of a postal address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal</IRI>
+        <Literal>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal</IRI>
+        <Literal xml:lang="en">DireccionPostal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal</IRI>
+        <Literal xml:lang="es">DireccionPostal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>esequip:Equipamiento</AbbreviatedIRI>
+        <Literal xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructura/equipamiento-municipal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>esequip:Equipamiento</AbbreviatedIRI>
+        <Literal xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructura/equipamiento-municipal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>esequip:Equipamiento</AbbreviatedIRI>
+        <Literal xml:lang="es">Equipamiento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>esequip:Equipamiento</AbbreviatedIRI>
+        <Literal xml:lang="en">Equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaAlta</IRI>
+        <Literal xml:lang="en">Date when the streetlight was installed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaAlta</IRI>
+        <Literal xml:lang="es">Fecha en la que la farola fue instalada</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaAlta</IRI>
+        <Literal xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaAlta</IRI>
+        <Literal xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaAlta</IRI>
+        <Literal xml:lang="es">fechaAlta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaAlta</IRI>
+        <Literal xml:lang="en">startingDate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaBaja</IRI>
+        <Literal xml:lang="en">Date when the streetlight is desinstalled</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaBaja</IRI>
+        <Literal xml:lang="es">Día en el que la farola es desinstalada</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaBaja</IRI>
+        <Literal xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaBaja</IRI>
+        <Literal xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaBaja</IRI>
+        <Literal xml:lang="en">endingDate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaBaja</IRI>
+        <Literal xml:lang="es">fechaBaja</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaRevision</IRI>
+        <Literal xml:lang="en">Date when the streetlights has a review</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaRevision</IRI>
+        <Literal xml:lang="es">Día en el que la farola tiene una revision</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaRevision</IRI>
+        <Literal xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaRevision</IRI>
+        <Literal xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaRevision</IRI>
+        <Literal xml:lang="es">fechaRevision</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaRevision</IRI>
+        <Literal xml:lang="en">rewiewDate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier</IRI>
+        <Literal xml:lang="es">id de la faroal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier</IRI>
+        <Literal xml:lang="en">id of the streetlight</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier</IRI>
+        <Literal xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier</IRI>
+        <Literal xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier</IRI>
+        <Literal xml:lang="en">identifier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier</IRI>
+        <Literal xml:lang="es">identifier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoAlimentacion</IRI>
+        <Literal xml:lang="es">Enlace a la lista skos que determina que tipo de alimentacion tienen las farolas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoAlimentacion</IRI>
+        <Literal xml:lang="en">Link to the skos list that determines what type of source has a streetlight</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoAlimentacion</IRI>
+        <Literal xml:lang="en">powerType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoAlimentacion</IRI>
+        <Literal xml:lang="es">tipoAlimentacion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoAlumbrado</IRI>
+        <Literal xml:lang="es">Enlace a la lista skos que determina que tipo de alumbrado tienen las farolas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoAlumbrado</IRI>
+        <Literal xml:lang="en">Link to the skos list that determines what type of lighting has a streetlight</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoAlumbrado</IRI>
+        <Literal xml:lang="en">lightingType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoAlumbrado</IRI>
+        <Literal xml:lang="es">tipoAlumbrado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoCable</IRI>
+        <Literal xml:lang="es">Relación entre la clase Caja y la lista skos sobre los tipos de cable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoCable</IRI>
+        <Literal xml:lang="en">Relation between the Box class and the skos list about the cable type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoCable</IRI>
+        <Literal xml:lang="en">cableType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoCable</IRI>
+        <Literal xml:lang="es">tipoCable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoIluminacion</IRI>
+        <Literal xml:lang="es">Enlace a la lista skos que determina el tipo de iluminación que se utiliza en la farola</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoIluminacion</IRI>
+        <Literal xml:lang="en">Link to the skos list that determines what type of iluminaation has a streetlight</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoIluminacion</IRI>
+        <Literal xml:lang="en">iluminationType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoIluminacion</IRI>
+        <Literal xml:lang="es">tipoIluminacion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoLampara</IRI>
+        <Literal xml:lang="es">Enlace a la lista skos que determina el tipo de lámpara que se utiliza en la farola</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoLampara</IRI>
+        <Literal xml:lang="en">Link to the skos list that determines what type of lamp has a streetlight</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoLampara</IRI>
+        <Literal xml:lang="en">lampType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoLampara</IRI>
+        <Literal xml:lang="es">tipoLampara</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoLuminaria</IRI>
+        <Literal xml:lang="es">Enlace a la lista skos que determina el tipo de luminaria que tienen las farolas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoLuminaria</IRI>
+        <Literal xml:lang="en">Link to the skos list that determines what type of luminary has a streetlight</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoLuminaria</IRI>
+        <Literal xml:lang="en">LuminaryType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoLuminaria</IRI>
+        <Literal xml:lang="es">tipoLuminaria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoSoporte</IRI>
+        <Literal xml:lang="es">Enlace a la lista skos que determina que tipo de soporte tienen las farolas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoSoporte</IRI>
+        <Literal xml:lang="en">Link to the skos list that determines what type of pole has a streetlight</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoSoporte</IRI>
+        <Literal xml:lang="en">holderType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoSoporte</IRI>
+        <Literal xml:lang="es">tipoSoporte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/def/secctor-public/territorio/distrito</IRI>
+        <Literal>http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/def/secctor-public/territorio/distrito</IRI>
+        <Literal xml:lang="es">Relacióne entre la clase DireccionPostal y la clase Distrito</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/def/secctor-public/territorio/distrito</IRI>
+        <Literal xml:lang="en">Relation between the PostalAddress class from the vocabulary of opencitydata  and the DIstrict class.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/def/secctor-public/territorio/distrito</IRI>
+        <Literal xml:lang="en">district</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/def/secctor-public/territorio/distrito</IRI>
+        <Literal xml:lang="es">distrito</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/def/sector-publico/territorio#Barrio</IRI>
+        <Literal xml:lang="en">Identity subdivision of a town or a village</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/def/sector-publico/territorio#Barrio</IRI>
+        <Literal xml:lang="es">Subdivisión con identidad propia de una ciudad o pueblo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/def/sector-publico/territorio#Barrio</IRI>
+        <Literal xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/def/sector-publico/territorio#Barrio</IRI>
+        <Literal xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/def/sector-publico/territorio#Barrio</IRI>
+        <Literal xml:lang="es">Barrio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/def/sector-publico/territorio#Barrio</IRI>
+        <Literal xml:lang="en">Neighborhood</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/def/sector-publico/territorio#Distrito</IRI>
+        <Literal xml:lang="en">Part into wich a population, territory or other place is divided for administrative or legal purposes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.linkeddata.es/def/sector-publico/territorio#Distrito</IRI>
+        <Literal xml:lang="es">Parte en que se divide una población, un territorio u otro lugar con fines administrativos o jurídicos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/def/sector-publico/territorio#Distrito</IRI>
+        <Literal xml:lang="en">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://vocab.linkeddata.es/def/sector-publico/territorio#Distrito</IRI>
+        <Literal xml:lang="es">http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/def/sector-publico/territorio#Distrito</IRI>
+        <Literal xml:lang="en">District</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.linkeddata.es/def/sector-publico/territorio#Distrito</IRI>
+        <Literal xml:lang="es">Distrito</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.opengis.net/spec/geosparql#Longitude</IRI>
+        <Literal xml:lang="es">La longitud WGS84 para un SpatialThing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.opengis.net/spec/geosparql#Longitude</IRI>
+        <Literal xml:lang="en">The WGS84 longitude of a SpatialThing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.opengis.net/spec/geosparql#Longitude</IRI>
+        <Literal xml:lang="en">http://www.opengis.net/spec/geosparql/1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.opengis.net/spec/geosparql#Longitude</IRI>
+        <Literal xml:lang="es">http://www.opengis.net/spec/geosparql/1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.opengis.net/spec/geosparql#Longitude</IRI>
+        <Literal xml:lang="en">Longitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.opengis.net/spec/geosparql#Longitude</IRI>
+        <Literal xml:lang="es">Longitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>geosparql:Feature</AbbreviatedIRI>
+        <Literal xml:lang="en">It represents the top level of the feature type. This class is equivalent to the GFI_Feature defined by ISO 19156, and is the superclass of all feature types.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>geosparql:Feature</AbbreviatedIRI>
+        <Literal xml:lang="es">Representa el máximo nivel del tipo feature. Esta clase es equivalente al GFI_Feature definida por la ISO 19156, y es la superclase de todos los tipos de feature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geosparql:Feature</AbbreviatedIRI>
+        <Literal xml:lang="en">http://www.opengis.net/spec/geosparql/1.1/req/core/feature-class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geosparql:Feature</AbbreviatedIRI>
+        <Literal xml:lang="es">http://www.opengis.net/spec/geosparql/1.1/req/core/feature-class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>geosparql:Feature</AbbreviatedIRI>
+        <Literal xml:lang="en">Feature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>geosparql:Feature</AbbreviatedIRI>
+        <Literal xml:lang="es">Feature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>geosparql:Geometry</AbbreviatedIRI>
+        <Literal xml:lang="en">It represents the top level of the geometry type. This class is equivalent to the UML GM_Objects class defined in ISO 19107, and is a superclass of all geometry types.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>geosparql:Geometry</AbbreviatedIRI>
+        <Literal xml:lang="es">Representa el máximo nivel del tipo geometry. Esta clase es equivalente a la clase UML GM_Objects definida en la ISO 19107, y es superclase de todos los tipos de geometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geosparql:Geometry</AbbreviatedIRI>
+        <Literal xml:lang="en">http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geosparql:Geometry</AbbreviatedIRI>
+        <Literal xml:lang="es">http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>geosparql:Geometry</AbbreviatedIRI>
+        <Literal xml:lang="en">Geometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>geosparql:Geometry</AbbreviatedIRI>
+        <Literal xml:lang="es">Geometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>geosparql:Latitude</AbbreviatedIRI>
+        <Literal xml:lang="es">La latitud WGS84 de un SpatialThing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>geosparql:Latitude</AbbreviatedIRI>
+        <Literal xml:lang="en">The WGS84 latitude of a SpatialThing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geosparql:Latitude</AbbreviatedIRI>
+        <Literal xml:lang="en">http://www.opengis.net/spec/geosparql/1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geosparql:Latitude</AbbreviatedIRI>
+        <Literal xml:lang="es">http://www.opengis.net/spec/geosparql/1.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>geosparql:Latitude</AbbreviatedIRI>
+        <Literal xml:lang="en">Latitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>geosparql:Latitude</AbbreviatedIRI>
+        <Literal xml:lang="es">Latitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>geosparql:Point</AbbreviatedIRI>
+        <Literal xml:lang="en">A class for representating a point definied by longitude and latitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>geosparql:Point</AbbreviatedIRI>
+        <Literal xml:lang="es">Clase que representa un punto definido por una longitud y latitud</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>geosparql:SpatialObject</AbbreviatedIRI>
+        <Literal xml:lang="es">Spatial Object representa todo lo que tenga una representación espacial. Es la superclase de feature y de geometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>geosparql:SpatialObject</AbbreviatedIRI>
+        <Literal xml:lang="en">Spatial Object represents everything that can have a spatial representation. It is superclass of feature and geometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geosparql:SpatialObject</AbbreviatedIRI>
+        <Literal xml:lang="en">http://www.opengis.net/spec/geosparql/1.1/req/core/spatial-object-class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geosparql:SpatialObject</AbbreviatedIRI>
+        <Literal xml:lang="es">http://www.opengis.net/spec/geosparql/1.1/req/core/spatial-object-class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>geosparql:SpatialObject</AbbreviatedIRI>
+        <Literal xml:lang="en">SpatialObject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>geosparql:SpatialObject</AbbreviatedIRI>
+        <Literal xml:lang="es">SpatialObject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geosparql:hasGeometry</AbbreviatedIRI>
+        <Literal xml:lang="en">A spatial representation for a given Feature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geosparql:hasGeometry</AbbreviatedIRI>
+        <Literal xml:lang="es">Una representación espacial para un Feature dado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geosparql:hasGeometry</AbbreviatedIRI>
+        <Literal xml:lang="en">http://www.opengis.net/ont/geosparql#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geosparql:hasGeometry</AbbreviatedIRI>
+        <Literal xml:lang="es">http://www.opengis.net/ont/geosparql#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2004/02/skos/core#ConceptScheme</IRI>
+        <Literal xml:lang="en">A concept scheme may be defined to include concepts from different sources</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2004/02/skos/core#ConceptScheme</IRI>
+        <Literal xml:lang="es">Un concept scheme puede estar definido para incluir conceptos de distintas fuentes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2004/02/skos/core#ConceptScheme</IRI>
+        <Literal xml:lang="en">http://www.w3.org/2004/02/skos/core#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/2004/02/skos/core#ConceptScheme</IRI>
+        <Literal xml:lang="es">http://www.w3.org/2004/02/skos/core#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2004/02/skos/core#ConceptScheme</IRI>
+        <Literal>Concept</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

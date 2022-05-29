@@ -1,0 +1,85 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+@prefix xsd: <http://www.w3.org/2001/XMLSSchema#> 
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> 
+@prefix dct: <https://purl.org/dc/terms/>
+@prefix skoslight: <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara> 
+
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara> a skos:ConceptScheme;
+rdfs:label "Tipos de lámpara de alumbrado público";
+rdfs:comment "Tesauro que recoge los tipos de lámpara de alumbrado público"
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/bombillocomun>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/vaporsodiabajapresion>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/vaporsodioaltapresion>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/vapormercurio>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/halogenurometalico>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/ceramico>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/led>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/descarga>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/led-descarga>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/mastercolour>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/fluorescente>
+skos:hasTopConcept <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/halogenoincandescente>
+prov:hadPrimarySource <https://www.opendatalapalma.es/datasets/e715be8fec6f4fd3b671f4592f8a209c_0/explore?location=28.665278%2C-17.862285%2C11.31&showTable=true>
+
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/bombillocomun> a skos:Concept;
+skos:notation "Bombillo comun"
+skos:prefLabel "Bombillo comun"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara>
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/vaporsodiabajapresion> a skos:Concept;
+skos:notation "Vapor sodio baja presión"
+skos:prefLabel "Vapor sodio baja presión"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara>
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/vaporsodioaltapresion> a skos:Concept;
+skos:notation "Vapor sodio alta presión"
+skos:prefLabel "Vapor sodio alta presión"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara>
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/vapormercurio> a skos:Concept;
+skos:notation "Vapor mercurio"
+skos:prefLabel "Vapor mercurio"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara>
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/halogenurometalico> a skos:Concept;
+skos:notation "Halógenuro metalico"
+skos:prefLabel "Halógenuro metálico"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara>
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/ceramico> a skos:Concept;
+skos:notation "Cerámico"
+skos:prefLabel "Cerámico"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara>
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/led> a skos:Concept;
+skos:notation "LED"
+skos:prefLabel "LED"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara>
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/descarga> a skos:Concept;
+skos:notation "DESCARGA"
+skos:prefLabel "DESCARGA"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara>
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/led-descarga> a skos:Concept;
+skos:notation "LED-DESCARGA"
+skos:prefLabel "LED-DESCARGA"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara>
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/mastercolour> a skos:Concept;
+skos:notation "Master colour"
+skos:prefLabel "Master colour"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara>
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/fluorescente> a skos:Concept;
+skos:notation "Fluorescente"
+skos:prefLabel "Fluorescente"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara>
+
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara/halogenoincandescente> a skos:Concept;
+skos:notation "Halógeno incandescente"
+skos:prefLabel "Halógeno incandescente"
+skos:inScheme <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara>

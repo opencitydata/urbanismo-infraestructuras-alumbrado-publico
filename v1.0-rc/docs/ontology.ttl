@@ -1,0 +1,712 @@
+@prefix : <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#> .
+
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico> rdf:type owl:Ontology ;
+                                                                                             owl:versionIRI <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico> ;
+                                                                                             <http://purl.org/dc/elements/1.1/title> "Vocabulario para la representación del Alumbrado Público"@es ,
+                                                                                                                                     "Vocabulary for the representation of the Public lighting"@en ;
+                                                                                             <http://purl.org/dc/terms/creator> "Corcho O"@en ,
+                                                                                                                                "Corcho O"@es ,
+                                                                                                                                "Martín Blázquez  M"@en ,
+                                                                                                                                "Martín Blázquez  M"@es ;
+                                                                                             rdfs:comment """Este vocabulario permite representar los datos relacionados con el alumbrado público, incluyendo datos relacionados con farolas, luminarias, lámparas, postes y cajas de alumbrado.
+Ha sido desarrollado en el contexto de la iniciativa OpenCityData"""@es ,
+                                                                                                          """This vocabulary allows representing data related to public lighting, including data related to streetlights, luminaries, lamps, poles and lighting boxes.
+It has been developed in the context of the OpenCityData initiative."""@en ;
+                                                                                             owl:priorVersion "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico/index-en.html"@en ,
+                                                                                                              "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico/index-en.html"@es .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://schema.org/address
+<http://schema.org/address> rdf:type owl:ObjectProperty ;
+                            rdfs:domain :Farola ;
+                            rdfs:range <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> ;
+                            rdfs:comment "Relación entre la clase Farola y la clase DireccionPostal"@es ,
+                                         "Relation between the Streetlight class and the DireccionPostal class"@en ;
+                            rdfs:isDefinedBy "https://schema.org/PostalAddress"@en ,
+                                             "https://schema.org/PostalAddress"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/barrio
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/barrio> rdf:type owl:ObjectProperty ;
+                                                                                rdfs:domain <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> ;
+                                                                                rdfs:range <http://vocab.linkeddata.es/def/sector-publico/territorio#Barrio> ;
+                                                                                rdfs:comment "Relación entre la clase DireccionPostal y la clase Barrio"@es ,
+                                                                                             "Relation between the PostalAddress class and the Neighborhood class"@en ,
+                                                                                             "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"@en ;
+                                                                                rdfs:isDefinedBy "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"@es ;
+                                                                                rdfs:label "barrio"@es ,
+                                                                                           "neighborhood"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#caja
+:caja rdf:type owl:ObjectProperty ;
+      rdfs:domain :Farola ;
+      rdfs:range :Caja ;
+      rdfs:comment "Relación entre la clase farola y la clase caja que forma parte de ella. Cada farola puede tener una caja"@es ,
+                   "Relation between the streetlight class and the box class that is part of it. Each streetlight can have a box"@en ;
+      rdfs:label "box"@en ,
+                 "caja"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#luminaria
+:luminaria rdf:type owl:ObjectProperty ;
+           rdfs:domain :Farola ;
+           rdfs:range :Luminaria ;
+           rdfs:comment "Relación entre la clase farola y la clase luminaria que forma parte de ella. Cada farola puede tener una o varias luminarias"@es ,
+                        "Relation between the streetlight class and the luminaire class that is part of it. Each streetlight may have one or more luminaires."@en ;
+           rdfs:label "luminaria"@es ,
+                      "luminary"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#poste
+:poste rdf:type owl:ObjectProperty ;
+       rdfs:domain :Farola ;
+       rdfs:range :Poste ;
+       rdfs:comment "Relación entre la clase farola y la clase poste que forma parte de ella. Cada farola puede tener un poste"@es ,
+                    "Relation between the streetlight class and the pole class that is part of it. Each streetlight can have a pole"@en ;
+       rdfs:label "pole"@en ,
+                  "poste"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tieneLampara
+:tieneLampara rdf:type owl:ObjectProperty ;
+              rdfs:domain :Luminaria ;
+              rdfs:range :Lampara ;
+              rdfs:comment """Relación entre la clase Luminaria y la clase Lámpara.
+Cada luminaria tiene una lámpara"""@es ,
+                           """Relation between the Luminary class and the Lamp class.
+Every luminary has a bulb"""@en ;
+              rdfs:label "hasLamp"@en ,
+                         "tieneLampara"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoAlimentacion
+:tipoAlimentacion rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Farola ;
+                  rdfs:comment "Relación entre la clase Farola y la lista skos sobre el tipo de alimentación que puede tener una farola"@es ,
+                               "Relation between the Streetlight class and the skos list about the power type that a streetlight can have"@en ;
+                  rdfs:label "powerType"@en ,
+                             "tipoAlimentacion"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoAlumbrado
+:tipoAlumbrado rdf:type owl:ObjectProperty ;
+               rdfs:domain :Farola ;
+               rdfs:comment "Relación entre la clase Farola y la lista skos sobre el tipo de Alumbrado que puede tener una farola"@es ,
+                            "Relation between the Streetlight class and the skos list about the types of lighting that a streetlight can have"@en ;
+               rdfs:label "lightingType"@en ,
+                          "tipoAlumbrado"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoCable
+:tipoCable rdf:type owl:ObjectProperty ;
+           rdfs:domain :Caja ;
+           rdfs:comment "Relación entre la clase Caja y la lista skos sobre los tipos de cables que puede tener una farola"@es ,
+                        "Relation between the Box class ant the skos list about the type of cable that a streetlight can have"@en ;
+           rdfs:label "cableType"@en ,
+                      "tipoCable"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoIluminacion
+:tipoIluminacion rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Farola ;
+                 rdfs:comment "Relación entre la clase Farola y la lista skos sobre el tipo de Iluminación que puede tener una farola"@es ,
+                              "Relation between the Streetlight class and the skos list about the types of iluminations that a streetlight can have"@en ;
+                 rdfs:label "IluminationType"@en ,
+                            "tipoIluminacion"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoLampara
+:tipoLampara rdf:type owl:ObjectProperty ;
+             rdfs:domain :Lampara ;
+             rdfs:comment "Relación entre la clase Lámpara y la lista skos sobre el tipo de lámpara que puede tener una farola"@es ,
+                          "Relation between the Lamp class and the skos list about the types of lamps that can have a streetlight"@en ;
+             rdfs:label "lampType"@en ,
+                        "tipoLampara"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoLuminaria
+:tipoLuminaria rdf:type owl:ObjectProperty ;
+               rdfs:domain :Luminaria ;
+               rdfs:comment "Relación entre la clase Luminaria y la lista skos sobre el tipo de luminaria que puede tener una farola"@es ,
+                            "Relation between the Luminary class and the skos list about the types of luminaries that a streetlight can have"@en ;
+               rdfs:label "luminaryType"@en ,
+                          "tipoLuminaria"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#tipoSoporte
+:tipoSoporte rdf:type owl:ObjectProperty ;
+             rdfs:domain :Poste ;
+             rdfs:comment "Relación entre la clase Poste y la lista skos sobre los tipos de postes que puede tener una farola"@es ,
+                          "Relation between the Pole class and the skos list about the types of holders that a streetlight can have"@en ;
+             rdfs:label "holderType"@en ,
+                        "tipoSoporte"@es .
+
+
+###  http://vocab.linkeddata.es/def/secctor-public/territorio/distrito
+<http://vocab.linkeddata.es/def/secctor-public/territorio/distrito> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:domain <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> ;
+                                                                    rdfs:range <http://vocab.linkeddata.es/def/sector-publico/territorio#Distrito> ;
+                                                                    rdfs:isDefinedBy "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio" ;
+                                                                    rdfs:label "Relacióne entre la clase DireccionPostal y la clase Distrito"@es ,
+                                                                               "Relation between the PostalAddress class from the vocabulary of opencitydata  and the DIstrict class."@en ,
+                                                                               "district"@en ,
+                                                                               "distrito"@es .
+
+
+###  http://www.opengis.net/spec/geosparql/hasGeometry
+<http://www.opengis.net/spec/geosparql/hasGeometry> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <http://www.opengis.net/spec/geosparql/Feature> ;
+                                                    rdfs:range <http://www.opengis.net/spec/geosparql/Geometry> ;
+                                                    rdfs:isDefinedBy "A spatial representation for a given Feature"@en ,
+                                                                     "Una representación espacial para un Feature dado"@es ,
+                                                                     "http://www.opengis.net/ont/geosparql#"@en ,
+                                                                     "http://www.opengis.net/ont/geosparql#"@es .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://schema.org/addressCountry
+<http://schema.org/addressCountry> rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain <http://schema.org#PostalAddress> ;
+                                   rdfs:range xsd:string ;
+                                   rdfs:comment "País en el que la farola está ubicada"@es ,
+                                                "The country in which the streetlight is located"@en ;
+                                   rdfs:isDefinedBy "https://schema.org"@en ,
+                                                    "https://schema.org"@es ;
+                                   rdfs:label "addressCountry"@en ,
+                                              "addressCountry"@es .
+
+
+###  http://schema.org/addressLocality
+<http://schema.org/addressLocality> rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain <http://schema.org#PostalAddress> ;
+                                    rdfs:range xsd:string ;
+                                    rdfs:comment "Localidad en la que está la calle a la que pertenece la farola"@es ,
+                                                 "The locality in which the street to which the lamppost belongs is situated"@en ;
+                                    rdfs:isDefinedBy "https://schema.org"@en ,
+                                                     "https://schema.org"@es ;
+                                    rdfs:label "addressLocality"@en ,
+                                               "addressLocality"@es .
+
+
+###  http://schema.org/streetAddress
+<http://schema.org/streetAddress> rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain <http://schema.org#PostalAddress> ;
+                                  rdfs:range xsd:string ;
+                                  rdfs:comment "Name of the street where the streetlight is located  also including the number and the venue type"@en ,
+                                               "Nombre de la calle en la que está la farola en la que también se incluye el número y el tipo de vía"@es ;
+                                  rdfs:isDefinedBy "https://schema.org"@en ,
+                                                   "https://schema.org"@es ;
+                                  rdfs:label "streetAddress"@en ,
+                                             "streetAddress"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#accesorios
+:accesorios rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Poste ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Los accesorios que puede tener una farola como por ejemplo un medidor de contaminación acústica, cámaras de seguridad, medidores de CO2, etc."@es ,
+                         "The accesories that a streetlight can have are some like an acoustic measurer, C02 measurer, CTV, and so on."@en ;
+            rdfs:label "accesories"@en ,
+                       "accesorios"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#altura
+:altura rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Farola ;
+        rdfs:range xsd:float ;
+        rdfs:comment "Altura de la farola desde el suelo hasta la parte más alta del poste"@es ,
+                     "Heigh of the streetlight from the floor to the top of the pole"@en ;
+        rdfs:label "altura"@es ,
+                   "heigh"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#alturaBrazo1
+:alturaBrazo1 rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Poste ;
+              rdfs:range xsd:float ;
+              rdfs:comment "En caso de que haya más de un brazo a distintas alturas este representará una de las alturas"@es ,
+                           "If there is more than one heigh for the arms of the pole this attributte will represent one of them"@en ;
+              rdfs:label "alturaBrazo1"@es ,
+                         "armHeigh2"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#alturaBrazo2
+:alturaBrazo2 rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Poste ;
+              rdfs:range xsd:float ;
+              rdfs:comment "En caso de que haya más de un brazo a distintas alturas este representará una de las alturas"@es ,
+                           "If there is more than one heigh for the arms of the pole this attributte will represent one of them"@en ;
+              rdfs:label "alturaBrazo2"@es ,
+                         "armHeigh2"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#anchura
+:anchura rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Farola ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Distance occupied by a streetlight from one of its luminaires to its opposite one"@en ,
+                      "Distancia que ocupa una farola desde una de sus luminarias hasta su opuesta"@es ;
+         rdfs:label "anchura"@es ,
+                    "width"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#consumo
+:consumo rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Lampara ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Consumo de la bombilla de la lámpara"@es ,
+                      "lamp bulb consumption"@en ;
+         rdfs:label "consume"@en ,
+                    "consumo"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#fabricante
+:fabricante rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Caja ,
+                        :Lampara ,
+                        :Luminaria ,
+                        :Poste ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Company that manufactures the materials which the streetlight is made of"@en ,
+                         "Compañía que fabrica los materiales de los que está formada la farola"@es ;
+            rdfs:label "fabricante"@es ,
+                       "manufacturer"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#gabineteDeControl
+:gabineteDeControl rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Farola ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Control cabinet that is shared between a group of streetlights"@es ,
+                                "Gabinete de control que comparte un grupo de faroals"@es ;
+                   rdfs:label "controlCabinet"@en ,
+                              "gabineteDeControl"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#horasDeFuncionamiento
+:horasDeFuncionamiento rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Farola ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Number of ours  that the streetlight spends activated"@en ,
+                                    "Número de horas en las que el alumbrado se encuentra encendido"@es ;
+                       rdfs:label "horasDeFuncionamiento"@es ,
+                                  "workingHours"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#intensidadLuminica
+:intensidadLuminica rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Lampara ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "La intensidad lumínica es la cantidad de flujo luminoso que emite una fuente por unidad de ángulo sólido"@es ,
+                                 "Luminous intensity is the amount of luminous flux emitted by a source per unit solid angle"@en ;
+                    rdfs:label "intensidadLuminica"@es ,
+                               "lightOutput"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#material
+:material rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Caja ,
+                      :Lampara ,
+                      :Luminaria ,
+                      :Poste ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Material del que están hechas las partes de la farola"@es ,
+                       "Material of which the streetlight parts are made"@en ;
+          rdfs:label "material"@en ,
+                     "material"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#metodoDeControl
+:metodoDeControl rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Farola ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Method of controlling the streetlight by which they are activated or deactivated"@en ,
+                              "Método de control de la farola con el que se activan o desactivan"@es ;
+                 rdfs:label "controlMethod"@en ,
+                            "metodoDeControl"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#modeloBombilla
+:modeloBombilla rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Farola ;
+                rdfs:range xsd:string ;
+                rdfs:comment "El modelo de bombilla de la lámpara"@es ,
+                             "The bulb model of the lamp"@en ;
+                rdfs:label "bulbModel"@en ,
+                           "modeloBombilla"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeBrazos
+:numeroDeBrazos rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Poste ;
+                rdfs:range xsd:int ;
+                rdfs:comment "La farola puede tener de uno a varios brazos, esto depende de su función que se le quiera dar a cada uno"@es ,
+                             "The streetlight can have from one to several arms, it depends on the function you want to give to each one."@en ;
+                rdfs:label "numberOfArms"@en ,
+                           "numeroDeBrazos"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeLamparas
+:numeroDeLamparas rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Lampara ;
+                  rdfs:range xsd:int ;
+                  rdfs:comment "El número de lámparas que tiene una farola. Además, tendrá que tener el mismo número que de luminarias."@es ,
+                               "The number of lamps that a streetlight has. It should have the same number as luminaries."@en ;
+                  rdfs:label "numberOfLamps"@en ,
+                             "numeroDeLamparas"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#numeroDeLuminarias
+:numeroDeLuminarias rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Luminaria ;
+                    rdfs:range xsd:int ;
+                    rdfs:comment "El número de luminarias que tiene una farola. Además tendrá que ser el mismo número de lámparas."@es ,
+                                 "The number of luminaries that has a streetlight. There should be the same number of lamps."@en ;
+                    rdfs:label "numberOfLuminaries"@en ,
+                               "numeroDeLuminarias"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potencia1
+:potencia1 rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Lampara ;
+           rdfs:range xsd:string ;
+           rdfs:comment """Potencia que tiene la bombilla de lámpara.
+Como se puede dar el caso en el que haya brazos a distintas alturas y que cada altura tenga un propóstio es posible que cambie la potencia de las bombillas.
+En caso de que solo haya una potencia solo se usará este atributo."""@es ,
+                        """The wattage of the lamp bulb.
+As it is possible that there are arms at different heights and that each height has a pupose, it is possible that hte power of the bulbs may change."""@en ;
+           rdfs:label "potencia1"@es ,
+                      "power1"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#potencia2
+:potencia2 rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Lampara ;
+           rdfs:range xsd:string ;
+           rdfs:comment """Potencia que tiene la bombilla de lámpara.
+Como se puede dar el caso en el que haya brazos a distintas alturas y que cada altura tenga un propóstio es posible que cambie la potencia de las bombillas."""@es ,
+                        """The wattage of the lamp bulb.
+As it is possible that there are arms at different heights and that each height has a pupose, it is possible that hte power of the bulbs may change."""@en ;
+           rdfs:label "potencia2"@es ,
+                      "power2"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#propietario
+:propietario rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Farola ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Entidad a la que pertenece la farola"@es ,
+                          "Entity that has ownership over the streetlight"@en ;
+             rdfs:label "owner"@en ,
+                        "propietario"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaAlta
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaAlta> rdf:type owl:DatatypeProperty ;
+                                                                                                           rdfs:domain <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> ;
+                                                                                                           rdfs:range xsd:dateTime ;
+                                                                                                           rdfs:comment "Date when the streetlight was installed"@en ,
+                                                                                                                        "Fecha en la que la farola fue instalada"@es ;
+                                                                                                           rdfs:isDefinedBy "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal"@en ,
+                                                                                                                            "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal"@es ;
+                                                                                                           rdfs:label "fechaAlta"@es ,
+                                                                                                                      "startingDate"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaBaja
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaBaja> rdf:type owl:DatatypeProperty ;
+                                                                                                           rdfs:domain <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> ;
+                                                                                                           rdfs:range xsd:dateTime ;
+                                                                                                           rdfs:comment "Date when the streetlight is desinstalled"@en ,
+                                                                                                                        "Día en el que la farola es desinstalada"@es ;
+                                                                                                           rdfs:isDefinedBy "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal"@en ,
+                                                                                                                            "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal"@es ;
+                                                                                                           rdfs:label "endingDate"@en ,
+                                                                                                                      "fechaBaja"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaRevision
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/fechaRevision> rdf:type owl:DatatypeProperty ;
+                                                                                                               rdfs:domain <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> ;
+                                                                                                               rdfs:range xsd:dateTime ;
+                                                                                                               rdfs:comment "Date when the streetlights has a review"@en ,
+                                                                                                                            "Día en el que la farola tiene una revision"@es ;
+                                                                                                               rdfs:isDefinedBy "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal"@en ,
+                                                                                                                                "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal"@es ;
+                                                                                                               rdfs:label "fechaRevision"@es ,
+                                                                                                                          "rewiewDate"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal/identifier> rdf:type owl:DatatypeProperty ;
+                                                                                                            rdfs:domain <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> ;
+                                                                                                            rdfs:range xsd:string ;
+                                                                                                            rdfs:comment "id de la faroal"@es ,
+                                                                                                                         "id of the streetlight"@en ;
+                                                                                                            rdfs:isDefinedBy "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal"@en ,
+                                                                                                                             "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal"@es ;
+                                                                                                            rdfs:label "identifier"@en ,
+                                                                                                                       "identifier"@es .
+
+
+###  http://www.opengis.net/spec/geosparql#Longitude
+<http://www.opengis.net/spec/geosparql#Longitude> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <http://www.opengis.net/spec/geosparql/Point> ;
+                                                  rdfs:range xsd:double ;
+                                                  rdfs:comment "La longitud WGS84 para un SpatialThing"@es ,
+                                                               "The WGS84 longitude of a SpatialThing"@en ;
+                                                  rdfs:isDefinedBy "http://www.opengis.net/spec/geosparql/1.0"@en ,
+                                                                   "http://www.opengis.net/spec/geosparql/1.0"@es ;
+                                                  rdfs:label "Longitude"@en ,
+                                                             "Longitude"@es .
+
+
+###  http://www.opengis.net/spec/geosparql/Latitude
+<http://www.opengis.net/spec/geosparql/Latitude> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <http://www.opengis.net/spec/geosparql/Point> ;
+                                                 rdfs:range xsd:double ;
+                                                 rdfs:comment "La latitud WGS84 de un SpatialThing"@es ,
+                                                              "The WGS84 latitude of a SpatialThing"@en ;
+                                                 rdfs:isDefinedBy "http://www.opengis.net/spec/geosparql/1.0"@en ,
+                                                                  "http://www.opengis.net/spec/geosparql/1.0"@es ;
+                                                 rdfs:label "Latitude"@en ,
+                                                            "Latitude"@es .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://schema.org#PostalAddress
+<http://schema.org#PostalAddress> rdf:type owl:Class ;
+                                  rdfs:comment "Esta clase se utiliza para la descripción de la dirección postal"@es ,
+                                               "This class is used to describe the postal address"@en ;
+                                  rdfs:isDefinedBy "https://schema.org/PostalAddress"@en ,
+                                                   "https://schema.org/PostalAddress"@es ;
+                                  rdfs:label "PostalAddress"@en ,
+                                             "PostalAddress"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Caja
+:Caja rdf:type owl:Class ;
+      rdfs:comment "Lugar desde el que se pueden acceder a los cables de la farola"@es ,
+                   "Place where the cables of the streetlight are accesible"@en ;
+      rdfs:label "Box"@en ,
+                 "Caja"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Farola
+:Farola rdf:type owl:Class ;
+        rdfs:subClassOf <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> ;
+        rdfs:comment "Big lantern that is situated above a pole that brings light to the street or highways"@en ,
+                     "Farol grande colocado en alto sobre un poste que sirve para alumbrar las calles y tramos de carreteras"@es ;
+        rdfs:label "Farola"@es ,
+                   "Lampost"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Lampara
+:Lampara rdf:type owl:Class ;
+         rdfs:subClassOf :Luminaria ;
+         rdfs:comment "Es la bombilla de la farola y es un convertidor de energía que transforma la energía eléctrica en luz"@es ,
+                      "It is the bulb in the streetlight and is an energy converter that transforms electrical energy into light."@en ;
+         rdfs:label "Lamp"@en ,
+                    "Lampara"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Luminaria
+:Luminaria rdf:type owl:Class ;
+           rdfs:comment "Aparato de alumbrado que reparte, filtra o transforma la luz emitida por las lámparas"@es ,
+                        "Lighting fixture that distributes, filters or transforms the light emitted by the lamps"@en ;
+           rdfs:label "Luminaria"@es ,
+                      "Luminary"@en .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#Poste
+:Poste rdf:type owl:Class ;
+       rdfs:comment "Clase que representa la columna que se coloca de forma vertical que sirve de apoyo"@es ,
+                    "Class that represents the column that is placed verticaly so it helps as a support"@en ;
+       rdfs:label "Pole"@en ,
+                  "Poste"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> rdf:type owl:Class ;
+                                                                                                           rdfs:subClassOf <http://schema.org#PostalAddress> ;
+                                                                                                           rdfs:comment "Esta clase reutilizada se usa para la descripción de una dirección postal"@es ,
+                                                                                                                        "This reused class is used for the description of a postal address"@en ;
+                                                                                                           rdfs:isDefinedBy "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal" ;
+                                                                                                           rdfs:label "DireccionPostal"@en ,
+                                                                                                                      "DireccionPostal"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento
+<http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal#Equipamiento> rdf:type owl:Class ;
+                                                                                                              rdfs:subClassOf <http://www.opengis.net/spec/geosparql/Feature> ;
+                                                                                                              rdfs:isDefinedBy "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructura/equipamiento-municipal"@en ,
+                                                                                                                               "http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructura/equipamiento-municipal"@es ;
+                                                                                                              rdfs:label "Equipamiento"@es ,
+                                                                                                                         "Equipment"@en .
+
+
+###  http://vocab.linkeddata.es/def/sector-publico/territorio#Barrio
+<http://vocab.linkeddata.es/def/sector-publico/territorio#Barrio> rdf:type owl:Class ;
+                                                                  rdfs:comment "Identity subdivision of a town or a village"@en ,
+                                                                               "Subdivisión con identidad propia de una ciudad o pueblo"@es ;
+                                                                  rdfs:isDefinedBy "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"@en ,
+                                                                                   "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"@es ;
+                                                                  rdfs:label "Barrio"@es ,
+                                                                             "Neighborhood"@en .
+
+
+###  http://vocab.linkeddata.es/def/sector-publico/territorio#Distrito
+<http://vocab.linkeddata.es/def/sector-publico/territorio#Distrito> rdf:type owl:Class ;
+                                                                    rdfs:comment "Part into wich a population, territory or other place is divided for administrative or legal purposes"@en ,
+                                                                                 "Parte en que se divide una población, un territorio u otro lugar con fines administrativos o jurídicos"@es ;
+                                                                    rdfs:isDefinedBy "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"@en ,
+                                                                                     "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"@es ;
+                                                                    rdfs:label "District"@en ,
+                                                                               "Distrito"@es .
+
+
+###  http://www.opengis.net/spec/geosparql/Feature
+<http://www.opengis.net/spec/geosparql/Feature> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.opengis.net/spec/geosparql/SpatialObject> ;
+                                                owl:disjointWith <http://www.opengis.net/spec/geosparql/Geometry> ;
+                                                rdfs:comment "It represents the top level of the feature type. This class is equivalent to the GFI_Feature defined by ISO 19156, and is the superclass of all feature types."@en ,
+                                                             "Representa el máximo nivel del tipo feature. Esta clase es equivalente al GFI_Feature definida por la ISO 19156, y es la superclase de todos los tipos de feature"@es ;
+                                                rdfs:isDefinedBy "http://www.opengis.net/spec/geosparql/1.1/req/core/feature-class"@en ,
+                                                                 "http://www.opengis.net/spec/geosparql/1.1/req/core/feature-class"@es ;
+                                                rdfs:label "Feature"@en ,
+                                                           "Feature"@es .
+
+
+###  http://www.opengis.net/spec/geosparql/Geometry
+<http://www.opengis.net/spec/geosparql/Geometry> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://www.opengis.net/spec/geosparql/SpatialObject> ;
+                                                 rdfs:comment "It represents the top level of the geometry type. This class is equivalent to the UML GM_Objects class defined in ISO 19107, and is a superclass of all geometry types."@en ,
+                                                              "Representa el máximo nivel del tipo geometry. Esta clase es equivalente a la clase UML GM_Objects definida en la ISO 19107, y es superclase de todos los tipos de geometry"@es ;
+                                                 rdfs:isDefinedBy "http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-class"@en ,
+                                                                  "http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-class"@es ;
+                                                 rdfs:label "Geometry"@en ,
+                                                            "Geometry"@es .
+
+
+###  http://www.opengis.net/spec/geosparql/Point
+<http://www.opengis.net/spec/geosparql/Point> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://www.opengis.net/spec/geosparql/Geometry> ;
+                                              rdfs:comment "A class for representating a point definied by longitude and latitude"@en ,
+                                                           "Clase que representa un punto definido por una longitud y latitud"@es .
+
+
+###  http://www.opengis.net/spec/geosparql/SpatialObject
+<http://www.opengis.net/spec/geosparql/SpatialObject> rdf:type owl:Class ;
+                                                      rdfs:comment "Spatial Object representa todo lo que tenga una representación espacial. Es la superclase de feature y de geometry"@es ,
+                                                                   "Spatial Object represents everything that can have a spatial representation. It is superclass of feature and geometry"@en ;
+                                                      rdfs:isDefinedBy "http://www.opengis.net/spec/geosparql/1.1/req/core/spatial-object-class"@en ,
+                                                                       "http://www.opengis.net/spec/geosparql/1.1/req/core/spatial-object-class"@es ;
+                                                      rdfs:label "SpatialObject"@en ,
+                                                                 "SpatialObject"@es .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class ;
+                                                    rdfs:comment "A concept scheme may be defined to include concepts from different sources"@en ,
+                                                                 "Un concept scheme puede estar definido para incluir conceptos de distintas fuentes"@es ;
+                                                    rdfs:isDefinedBy "http://www.w3.org/2004/02/skos/core#"@en ,
+                                                                     "http://www.w3.org/2004/02/skos/core#"@es ;
+                                                    rdfs:label "Concept" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoAlimentacion
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoAlimentacion> rdf:type owl:NamedIndividual ,
+                                                                                                                      <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                                                             rdfs:comment "Enlace a la lista skos que determina que tipo de alimentacion tienen las farolas"@es ,
+                                                                                                                          "Link to the skos list that determines what type of source has a streetlight"@en ;
+                                                                                                             rdfs:label "powerType"@en ,
+                                                                                                                        "tipoAlimentacion"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoAlumbrado
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoAlumbrado> rdf:type owl:NamedIndividual ,
+                                                                                                                   <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                                                          rdfs:comment "Enlace a la lista skos que determina que tipo de alumbrado tienen las farolas"@es ,
+                                                                                                                       "Link to the skos list that determines what type of lighting has a streetlight"@en ;
+                                                                                                          rdfs:label "lightingType"@en ,
+                                                                                                                     "tipoAlumbrado"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoCable
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoCable> rdf:type owl:NamedIndividual ,
+                                                                                                               <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                                                      rdfs:comment "Relación entre la clase Caja y la lista skos sobre los tipos de cable"@es ,
+                                                                                                                   "Relation between the Box class and the skos list about the cable type"@en ;
+                                                                                                      rdfs:label "cableType"@en ,
+                                                                                                                 "tipoCable"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoIluminacion
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoIluminacion> rdf:type owl:NamedIndividual ,
+                                                                                                                     <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                                                            rdfs:comment "Enlace a la lista skos que determina el tipo de iluminación que se utiliza en la farola"@es ,
+                                                                                                                         "Link to the skos list that determines what type of iluminaation has a streetlight"@en ;
+                                                                                                            rdfs:label "iluminationType"@en ,
+                                                                                                                       "tipoIluminacion"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoLampara
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoLampara> rdf:type owl:NamedIndividual ,
+                                                                                                                 <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                                                        rdfs:comment "Enlace a la lista skos que determina el tipo de lámpara que se utiliza en la farola"@es ,
+                                                                                                                     "Link to the skos list that determines what type of lamp has a streetlight"@en ;
+                                                                                                        rdfs:label "lampType"@en ,
+                                                                                                                   "tipoLampara"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoLuminaria
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoLuminaria> rdf:type owl:NamedIndividual ,
+                                                                                                                   <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                                                          rdfs:comment "Enlace a la lista skos que determina el tipo de luminaria que tienen las farolas"@es ,
+                                                                                                                       "Link to the skos list that determines what type of luminary has a streetlight"@en ;
+                                                                                                          rdfs:label "LuminaryType"@en ,
+                                                                                                                     "tipoLuminaria"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoSoporte
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipoSoporte> rdf:type owl:NamedIndividual ,
+                                                                                                                 <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                                                        rdfs:comment "Enlace a la lista skos que determina que tipo de soporte tienen las farolas"@es ,
+                                                                                                                     "Link to the skos list that determines what type of pole has a streetlight"@en ;
+                                                                                                        rdfs:label "holderType"@en ,
+                                                                                                                   "tipoSoporte"@es .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
